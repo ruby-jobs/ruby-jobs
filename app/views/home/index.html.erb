@@ -1,0 +1,20 @@
+<h3>Trabalhos com Ruby</h3>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Título</th>
+      <th>Empresa</th>
+      <th>Localização</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+	  	<% @jobs.each do |job| %>
+  	    <td><%= job.title %></td>
+  	    <td><%= job.company %></td>
+  	    <td><%= job.location %></td>
+  		<% end %>
+    </tr>
+  </tbody>
+</table>
