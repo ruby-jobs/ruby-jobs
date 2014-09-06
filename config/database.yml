@@ -19,3 +19,10 @@ test: &TEST
   host: localhost
   pool: 5
   timeout: 5000
+
+production:
+  adapter: postgresql
+  encoding: utf8
+  database: rubyjobs_production
+  username: root
+  password:     

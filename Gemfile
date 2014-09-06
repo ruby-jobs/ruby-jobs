@@ -12,3 +12,8 @@ gem 'jbuilder', '~> 1.2'
 gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
                               :github => 'anjlab/bootstrap-rails',
                               :branch => '3.0.0'
+
+group :production do
+  gem 'activerecord-jdbcpostgresql-adapter'
+  gem 'rails_12factor', '0.0.2'
+end
