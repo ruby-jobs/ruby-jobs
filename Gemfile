@@ -14,6 +14,6 @@ gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
                               :branch => '3.0.0'
 
 group :production do
-  gem 'activerecord-jdbcpostgresql-adapter'
+  gem 'pg'
   gem 'rails_12factor', '0.0.2'
 end
