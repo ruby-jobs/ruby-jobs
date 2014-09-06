@@ -4,7 +4,7 @@
 	    <h2><%= job.title %></h2>
 	    <h4><%= job.company %></h4>
 	    <p><%= job.location %></p>
-	    <p><a class="btn btn-default" href="#" role="button">Ver detalhes »</a></p>
+	    <p><%= link_to "Ver detalhes »", job_path(job.id), :class => "btn btn-default", :role => "button" %></p>
 	  </div>
   <% end %>
 </div>
