@@ -11,7 +11,9 @@
 <div class="container">
   <div class="jumbotron">
     <div class="container">
-      <h1>RubyJobs</h1>
+      <h1>RubyJobs
+        <%= image_tag "ruby.png", :size => "75x75" %>
+      </h1>
       <p>Site criado com o intuito de fazer o meio-campo entre empresas querendo contratar desenvolvedores Ruby, e desenvolvedores que buscam emprego.</p>
       <p><%= link_to 'Crie uma oferta de trabalho', jobs_path, :class => 'btn btn-danger btn-lg', :role => 'button' %></p>
     </div>
