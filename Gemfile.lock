@@ -47,6 +47,7 @@ GEM
     coffee-script-source (1.8.0)
     erubis (2.7.0)
     execjs (2.2.1)
+    google-analytics-rails (0.0.6)
     hike (1.2.3)
     i18n (0.6.11)
     jbuilder (1.5.3)
@@ -130,6 +131,7 @@ PLATFORMS
 
 DEPENDENCIES
   anjlab-bootstrap-rails!
+  google-analytics-rails
   jbuilder (~> 1.2)
   jquery-rails
   jquery-ui-rails
