@@ -37,6 +37,9 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
+    bootstrap-kaminari-views (0.0.5)
+      kaminari (>= 0.13)
+      rails (>= 3.1)
     builder (3.2.2)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
@@ -59,6 +62,9 @@ GEM
     jquery-ui-rails (5.0.0)
       railties (>= 3.2.16)
     json (1.8.1)
+    kaminari (0.15.1)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
     libv8 (3.16.14.3)
     mail (2.5.4)
       mime-types (~> 1.16)
@@ -131,10 +137,12 @@ PLATFORMS
 
 DEPENDENCIES
   anjlab-bootstrap-rails!
+  bootstrap-kaminari-views
   google-analytics-rails
   jbuilder (~> 1.2)
   jquery-rails
   jquery-ui-rails
+  kaminari
   mysql2
   pg
   rails (= 4.1.4)
