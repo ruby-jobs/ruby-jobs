@@ -5,4 +5,4 @@ Repositório do RubyJobs.me
 O projeto foi criado com a intuição de mostrar ofertas de emprego
 para desenvolvedores Ruby.
 
-**Contribua!**
+*Contribua!*
