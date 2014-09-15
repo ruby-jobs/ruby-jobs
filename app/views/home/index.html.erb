@@ -4,6 +4,7 @@
 	    <h2><%=h truncate(job.title, :length => 23) %></h2>
 	    <h4><%=h truncate(job.company, :length => 25) %></h4>
 	    <p><%=h truncate(job.location, :length => 25) %></p>
+	    <p><%=h job.created_at.strftime("%d/%m/%Y") %></p>
 	    <p><%= link_to "Ver detalhes »", job_path(job.id), :class => "btn btn-primary", :role => "button" %></p>
 	  </div>
   <% end %>
