@@ -37,15 +37,10 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
-    better_errors (2.0.0)
-      coderay (>= 1.0.0)
-      erubis (>= 2.6.6)
-      rack (>= 0.9.0)
     bootstrap-kaminari-views (0.0.5)
       kaminari (>= 0.13)
       rails (>= 3.1)
     builder (3.2.2)
-    coderay (1.1.0)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -142,7 +137,6 @@ PLATFORMS
 
 DEPENDENCIES
   anjlab-bootstrap-rails!
-  better_errors
   bootstrap-kaminari-views
   google-analytics-rails
   jbuilder (~> 1.2)

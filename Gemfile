@@ -12,7 +12,6 @@ gem 'jbuilder', '~> 1.2'
 gem 'kaminari'
 gem 'bootstrap-kaminari-views'
 gem 'google-analytics-rails'
-gem 'better_errors'
 gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
                               :github => 'anjlab/bootstrap-rails',
                               :branch => '3.0.0'
