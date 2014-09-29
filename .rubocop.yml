@@ -1,0 +1,42 @@
+inherit_from: .rubocop_todo.yml
+
+AllCops:
+  RunRailsCops: true
+  Include:
+    - '**/Gemfile'
+    - '**/Rakefile'
+    - '**/*.rake'
+  Exclude:
+    - db/schema.rb
+    - db/migrate/*
+    - bin/*
+
+Metrics/LineLength:
+  Max: 112
+
+Style/AccessorMethodName:
+  Enabled: true
+
+Style/Documentation:
+  Enabled: false
+
+Style/EmptyLinesAroundBody:
+  Enabled: true
+
+Style/HashSyntax:
+  Enabled: true
+
+Style/IndentationWidth:
+  Enabled: true
+
+Style/StringLiterals:
+  Enabled: true
+
+Style/Tab:
+  Enabled: true
+
+Style/TrailingBlankLines:
+  Enabled: true
+
+Style/TrailingWhitespace:
+  Enabled: true
