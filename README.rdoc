@@ -18,7 +18,7 @@ Instale as dependências
 
 Crie o banco e rode as migrations
    rake db:create 
-   db:migrate
+   rake db:migrate
 
 Rode a aplicação :grin:
    rails s
