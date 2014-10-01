@@ -17,10 +17,8 @@ Instale as dependências
   - Execute o bundle: bundle install
 
 Crie o banco e rode as migrations
-   rake db:create db:migrate
-
-Execute os testes! :+1:
-   rake test
+   rake db:create 
+   db:migrate
 
 Rode a aplicação :grin:
    rails s
