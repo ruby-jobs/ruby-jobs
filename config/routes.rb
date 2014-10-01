@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   resources :jobs
   match '/feed' => 'jobs#feed',
         :as => :feed,
-        :defaults => { :format => 'atom' }, via: :get
+        :defaults => { format: 'atom' }, via: :get
 end
