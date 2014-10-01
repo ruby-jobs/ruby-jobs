@@ -6,3 +6,21 @@ O projeto foi criado com a intuição de mostrar ofertas de emprego
 para desenvolvedores Ruby.
 
 *Contribua!*
+
+=== Instalação
+
+Clone o repositório
+   git clone https://github.com/matheusml/rubyjobs.git
+
+Instale as dependências
+  - Instale o mysql
+  - Execute o bundle: bundle install
+
+Crie o banco e rode as migrations
+   rake db:create db:migrate
+
+Execute os testes! :+1:
+   rake test
+
+Rode a aplicação :grin:
+   rails s
