@@ -1,11 +1,2 @@
-<div class="row">
-  <div class="col-md-6">
-	  <% if @job.errors.any? %>
-			<h2>Campos com * são obrigatórios</h2>
-		<% end %>
-		
-		<%= form_for :job do |f| %>
-  		<%= render :partial => 'create', :locals => { :f => f} %>
-		<% end %>
-  </div>
-</div>
+<h1 class="page-header" >Cadastrar Novo Job</h1>
+<%= render 'form' %>

@@ -1,4 +1,9 @@
 class JobsController < ApplicationController
+
+  def index
+    @jobs = Job.order('Id DESC').page(params[:page]).per(6)
+  end
+
   def new
     @job = Job.new
   end
@@ -39,6 +44,6 @@ class JobsController < ApplicationController
   private
 
   def job_params
-    params.require(:job).permit(:title, :email, :company, :skills, :location, :description)
+    params.require(:job).permit(:title, :email, :company, :skills, :location, :description, :remote)
   end
 end

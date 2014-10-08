@@ -12,6 +12,7 @@ gem 'jbuilder', '~> 1.2'
 gem 'kaminari'
 gem 'bootstrap-kaminari-views'
 gem 'google-analytics-rails'
+gem 'simple_form', '~> 3.1.0.rc1', github: 'plataformatec/simple_form'
 gem 'anjlab-bootstrap-rails', require: 'bootstrap-rails',
                               github: 'anjlab/bootstrap-rails',
                               branch: '3.0.0'
