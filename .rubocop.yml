@@ -10,6 +10,7 @@ AllCops:
     - db/schema.rb
     - db/migrate/*
     - bin/*
+    - config/initializers/simple_form_bootstrap.rb*
 
 Metrics/LineLength:
   Max: 112

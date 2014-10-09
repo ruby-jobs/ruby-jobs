@@ -18,8 +18,11 @@ Instale as dependências
   - Overcommit hooks: overcommit --install
 
 Crie o banco e rode as migrations
-   rake db:create 
+   rake db:create
    rake db:migrate
+
+Rode os testes :+1:
+   rspec
 
 Rode a aplicação :grin:
    rails s
