@@ -25,3 +25,13 @@ group :development do
   gem 'rubocop', require: false
   gem 'overcommit', require: false
 end
+
+group :test, :development do
+  gem 'rspec-rails', '~> 3.0.0'
+end
+
+group :test do
+  gem 'shoulda-matchers'
+  gem 'factory_girl', '~> 4.0'
+  gem 'simplecov', require: false
+end
