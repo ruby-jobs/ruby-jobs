@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.1.4'
-gem 'mysql2'
+gem 'rails', '~> 4.1.6'
+gem 'sqlite3'
 gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'therubyracer', platforms: :ruby
@@ -12,6 +12,7 @@ gem 'jbuilder', '~> 1.2'
 gem 'kaminari'
 gem 'bootstrap-kaminari-views'
 gem 'google-analytics-rails'
+gem 'simple_form', '~> 3.1.0.rc1', github: 'plataformatec/simple_form'
 gem 'anjlab-bootstrap-rails', require: 'bootstrap-rails',
                               github: 'anjlab/bootstrap-rails',
                               branch: '3.0.0'
@@ -27,7 +28,7 @@ group :development do
 end
 
 group :test, :development do
-  gem 'rspec-rails', '~> 3.0.0'
+  gem 'rspec-rails', '~> 3.1.0'
 end
 
 group :test do

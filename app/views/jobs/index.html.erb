@@ -1,7 +1,18 @@
+<h1 class="page-header" >Novos Jobs!</h1>
 <div class="row">
-  <div class="col-md-6">
-		<%= form_for :job do |f| %>
-  		<%= render :partial => 'create', :locals => { :f => f} %>
-		<% end %>
-  </div>
+  <% @jobs.each do |job| %>
+    <div class="col-md-4 job-item">
+      <div class="caption">
+        <span class="label label-primary"><%= job.created_at.strftime("%d/%m/%Y") %></span> <span class="label label-warning"><%= job.location %></span> <%= remote_tag(job.remote) %>
+        <h3><%= job.title  %></h3>
+        <p class='company'><strong><%= job.company %></strong></p>
+        <%= link_to "Ver detalhes »", job_path(job.id), :class => "btn btn-info btn-sm btn-job-detail btn-block", :role => "button" %>
+      </div>
+    </div>
+    <%= cycle('','','<div class="clearfix visible-lg-block"></div>').html_safe %>
+  <% end %>
+</div>
+
+<div align="center">
+  <%= paginate @jobs, :theme => 'twitter-bootstrap-3' %>
 </div>

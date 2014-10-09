@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'home#index'
+  root 'jobs#index'
 
   resources :jobs
   match '/feed' => 'jobs#feed',

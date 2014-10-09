@@ -1,23 +1,20 @@
-<div class="form-group">
-  <label>Título:</label> <%= @job.title %>
+<div class='row'>
+  <h2 class="page-header" >Detalhes do Job</h2>
+  <div class='job-detail col-md-6'>
+    <h3><%= @job.title %></h3>
+    <p><strong>Postado em:</strong> <%= @job.created_at.strftime("%d/%m/%Y") %></p>
+    <p><strong>Por: </strong><%= @job.company %></p>
+    <p><strong>Local:</strong> <%= @job.location %></p>
+    <p><strong>Contato:</strong> <%= link_to(@job.email,"mailto://#{@job.email}?subject=Resposta:#{@job.title}") %></p>
+    <p><strong>Pode ser realizado remotamente?:</strong> <%= @job.remote ? "Sim": "Não" %></p>
+    <p><strong>Descrição:</strong></p>
+    <div class='highlight'>
+      <code><%= @job.description %></code>
+    </div>
+    <p><strong>Habilidades/Requerimentos:</strong></p>
+    <div class='highlight'>
+      <code><%= @job.skills %></code>
+    </div>
+  </div>
 </div>
-<div class="form-group">
-  <label>Empresa:</label> <%= @job.company %>
-</div>
-<div class="form-group">
-  <label>Localização:</label> <%= @job.location %>
-</div>
-<div class="form-group">
-  <label>Adicionada em:</label> <%= @job.created_at.strftime("%d/%m/%Y") %>
-</div>
-<div class="form-group">
-  <label>Habilidades/Requerimentos:</label> <%= @job.skills %>
-</div>
-<div class="form-group">
-  <label>Descrição:</label> <%= @job.description %>
-</div>
-<div class="form-group">
-  <label>E-mail:</label> <%= @job.email %>
-</div>
-
 <%= link_to 'Voltar', root_url, :class => 'btn btn-default' %>

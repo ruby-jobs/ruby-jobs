@@ -1,28 +1,18 @@
-development:
-  adapter: mysql2
+default: &default
+  adapter: sqlite3
   encoding: utf8
-  reconnect: false
-  database: rubyjobs_development
-  pool: 5
-  username: root
-  password:
 
-# Warning: The database defined as "test" will be erased and
-# re-generated from your development database when you run "rake".
-# Do not set this db to the same as development or production.
-test: &TEST
-  adapter: mysql2
-  encoding: utf8
-  database: rubyjobs_test
-  username: root
-  password:
-  host: localhost
-  pool: 5
-  timeout: 5000
+development:
+  <<: *default
+  database: db/rubyjobs_development
+
+test:
+  <<: *default
+  database: db/rubyjobs_test
 
 production:
   adapter: postgresql
   encoding: utf8
   database: rubyjobs_production
   username: root
-  password:     
+  password:

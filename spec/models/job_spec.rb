@@ -5,6 +5,7 @@ describe Job do
   it { should validate_presence_of(:description) }
   it { should validate_presence_of(:email) }
   it { should validate_presence_of(:company) }
+  it { should_not allow_value(nil).for(:remote) }
 
   context 'when job is valid' do
     let(:job) { FactoryGirl.build(:job) }

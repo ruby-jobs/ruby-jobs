@@ -5,5 +5,6 @@ FactoryGirl.define do
     company 'Company'
     email 'Email'
     description 'Description'
+    remote false
   end
 end

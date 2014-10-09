@@ -1,3 +1,66 @@
 // Place all the styles related to the jobs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+ .job-item{
+    margin-bottom: 10px;
+    padding: 10px;
+    height: auto;
+
+    .caption {
+      border: 1px solid #dddddd;
+      border-radius: 5px;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      padding: 20px;
+      min-height: 150px;
+    }
+
+    .company{
+      color: #aaa;
+      margin-top: 5px;
+    }
+    p{
+      margin-bottom: 3px;
+    }
+    h3{
+      margin-top: 9px;
+      margin-bottom:  5px;
+      font-size: 20px;
+    }
+    .btn-job-detail{
+      margin-top: 30px;
+      position: relative;
+      bottom: 00px;
+    }
+ }
+
+.job-detail{
+  h3{
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
+  .label{
+    font-size: 13px;
+  }
+  p{
+    background-color: #F7F7F9;
+    padding: 4px;
+    margin-bottom: 18px;
+    border:solid 1px #E1E1E8;
+    strong{
+      display: block;
+    }
+  }
+  .highlight{
+    background-color: #F7F7F9;
+    border:solid 1px #E1E1E8;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-top: -19px;
+  }
+  .highlight code{
+    font-size: 15px;
+    color: #2F6F9F;
+  }
+}
+
