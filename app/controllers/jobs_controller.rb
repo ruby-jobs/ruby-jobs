@@ -4,7 +4,7 @@ class JobsController < ApplicationController
   end
 
   def new
-    @job = Job.new
+    @job = Job.new(remote: false)
   end
 
   def create
