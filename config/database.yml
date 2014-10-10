@@ -4,11 +4,11 @@ default: &default
 
 development:
   <<: *default
-  database: db/rubyjobs_development
+  database: db/rubyjobs_development.sqlite3
 
 test:
   <<: *default
-  database: db/rubyjobs_test
+  database: db/rubyjobs_test.sqlite3
 
 production:
   adapter: postgresql
