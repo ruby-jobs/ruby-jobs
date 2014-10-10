@@ -13,7 +13,6 @@ Clone o repositório
    git clone https://github.com/matheusml/rubyjobs.git
 
 Instale as dependências
-  - Instale o mysql
   - Execute o bundle: bundle install
   - Overcommit hooks: overcommit --install
 
