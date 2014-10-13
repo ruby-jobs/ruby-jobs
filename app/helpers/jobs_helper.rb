@@ -7,7 +7,7 @@ module JobsHelper
     tag_a << %(original_referer=#{url}&amp;)
     tag_a << %(text=Vaga%20para%20#{CGI.escape(title)}&amp;)
     tag_a << %(tw_p=tweetbutton&amp;url=#{url}")
-    tag_a << %(class="btn btn-default" target="_blank" >)
+    tag_a << %(class="btn btn-info" target="_blank" >)
     tag_a << %(<i class="fa fa-twitter fa-lg"> </i>  Tweet</a>)
     tag_a.join.html_safe
   end
