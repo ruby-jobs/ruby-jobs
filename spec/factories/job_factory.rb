@@ -6,5 +6,6 @@ FactoryGirl.define do
     email 'Email'
     description 'Description'
     remote false
+    slug 'slug'
   end
 end
