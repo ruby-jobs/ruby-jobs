@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe Job do
-  subject { create(:job, title: 'desenvolvedor back-end ruby on rails pleno') }
+  subject { create(:job) }
 
   describe 'validations' do
     it { should validate_presence_of(:title) }
@@ -14,6 +14,5 @@ describe Job do
 
   describe 'when job is valid' do
     it { expect(subject).to be_valid }
-    it { expect(subject.slug).to eql "#{subject.id}-desenvolvedor-back-end-ruby-on-rails-pleno" }
   end
 end
