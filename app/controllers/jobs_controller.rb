@@ -11,7 +11,7 @@ class JobsController < ApplicationController
     @job = Job.new(job_params)
 
     if @job.save
-      redirect_to :root
+      redirect_to @job
     else
       render 'new'
     end
