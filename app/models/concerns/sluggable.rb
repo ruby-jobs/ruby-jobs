@@ -2,7 +2,7 @@ module Sluggable
   extend ActiveSupport::Concern
 
   included do
-    validates :slug, presence: true
+    validates :slug, presence: true, on: :update
     after_save :generate_slug, if: :slug_must_change?
 
     def to_param
