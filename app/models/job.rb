@@ -1,4 +1,6 @@
 class Job < ActiveRecord::Base
+  include Sluggable
+
   validates :title, :description, :email, :company, presence: true
   validates :remote, inclusion: { in: [true, false] }
 
