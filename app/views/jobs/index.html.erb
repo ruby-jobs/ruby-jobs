@@ -5,7 +5,7 @@
         <span class="label label-primary"><%= job.created_at.strftime("%d/%m/%Y") %></span> <span class="label label-warning"><%= job.location %></span> <%= remote_tag(job.remote) %>
         <h3><%= job.title  %></h3>
         <p class='company'><strong><%= job.company %></strong></p>
-        <%= link_to "Ver detalhes »", job_path(job.id), :class => "btn btn-info btn-sm btn-job-detail btn-block", :role => "button" %>
+        <%= link_to "Ver detalhes »", job_path(job), :class => "btn btn-info btn-sm btn-job-detail btn-block", :role => "button" %>
       </div>
     </div>
     <%= cycle('','','<div class="clearfix visible-lg-block"></div>').html_safe %>
