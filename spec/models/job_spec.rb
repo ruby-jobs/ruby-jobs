@@ -1,16 +1,35 @@
 require 'rails_helper'
 
 describe Job do
-  it { should validate_presence_of(:title) }
-  it { should validate_presence_of(:description) }
-  it { should validate_presence_of(:email) }
-  it { should validate_presence_of(:company) }
-  it { should_not allow_value(nil).for(:remote) }
+
+  context 'validations' do
+
+    context 'presence_of' do
+      it { should validate_presence_of(:title) }
+      it { should validate_presence_of(:description) }
+      it { should validate_presence_of(:email) }
+      it { should validate_presence_of(:company) }
+    end
+
+    context 'inclusion of' do
+      it { should validate_inclusion_of(:remote).in_array([true, false]) }
+    end
+
+    context 'format_of' do
+      it { should allow_value('me@email.com').for(:email) }
+      it { should_not allow_value('m@e.com').for(:email) }
+    end
+
+  end
 
   context 'when job is valid' do
-    let(:job) { FactoryGirl.build(:job) }
-    it 'return true' do
-      expect(job).to be_valid
-    end
+    subject(:job) { build(:job) }
+    it { expect(job).to be_valid }
   end
+
+  context 'when job is not valid' do
+    subject(:job) { build(:job, email: 'm@e.com') }
+    it { expect(job).not_to be_valid }
+  end
+
 end
