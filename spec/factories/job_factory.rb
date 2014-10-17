@@ -3,7 +3,7 @@ FactoryGirl.define do
     title 'Title'
     location 'Location'
     company 'Company'
-    email 'Email'
+    sequence(:email) { |n| "email#{n}@email.com" }
     description 'Description'
     remote false
   end
