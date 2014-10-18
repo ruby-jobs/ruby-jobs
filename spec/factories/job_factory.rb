@@ -6,5 +6,6 @@ FactoryGirl.define do
     sequence(:email) { |n| "email#{n}@email.com" }
     description 'Description'
     remote false
+    slug 'slug'
   end
 end

@@ -28,6 +28,7 @@ group :development do
 end
 
 group :test, :development do
+  gem 'pry-rails'
   gem 'rspec-rails', '~> 3.1.0'
 end
 

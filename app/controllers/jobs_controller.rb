@@ -1,6 +1,6 @@
 class JobsController < ApplicationController
   def index
-    @jobs = Job.order('Id DESC').page(params[:page]).per(6)
+    @jobs = Job.page(params[:page]).per(6)
   end
 
   def new
@@ -11,7 +11,7 @@ class JobsController < ApplicationController
     @job = Job.new(job_params)
 
     if @job.save
-      redirect_to :root
+      redirect_to @job
     else
       render 'new'
     end
@@ -26,7 +26,7 @@ class JobsController < ApplicationController
     @title = 'Rubyjobs'
 
     # the news items
-    @job =  Job.order('updated_at desc')
+    @job =  Job.updated_at_desc
 
     # this will be our Feed's update timestamp
     @updated = @job.first.updated_at unless
