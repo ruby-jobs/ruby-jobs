@@ -12,6 +12,6 @@
  *
  *= require_self
  *= require twitter/bootstrap
- *= require home
+ *= require style
  *= require jobs
  */

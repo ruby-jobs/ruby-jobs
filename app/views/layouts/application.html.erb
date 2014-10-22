@@ -9,22 +9,14 @@
   <%= auto_discovery_link_tag :atom, "/feed" %>
   <%= auto_discovery_link_tag :rss, "/feed.rss" %>
 
+  <%= favicon_link_tag 'ruby.png' %>
   <!-- http://fortawesome.github.io/Font-Awesome/ -->
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
 </head>
 <body>
 
-<div class="container">
-  <div class="jumbotron">
-    <div class="container">
-      <h1>RubyJobs
-        <%= image_tag "ruby.png", :size => "75x75" %>
-      </h1>
-      <p>Site criado com o intuito de fazer o meio-campo entre empresas querendo contratar desenvolvedores Ruby, e desenvolvedores que buscam emprego.</p>
-      <p><%= link_to 'Crie uma oferta de trabalho', new_job_path, :class => 'btn btn-danger btn-lg', :role => 'button' %></p>
-    </div>
-  </div>
+  <%= render 'layouts/navbar' %>
 
   <div class="container">
     <%= yield %>
@@ -33,7 +25,5 @@
       <p><%= link_to image_tag("rss_icon.png"), feed_path %> Copyright © 2014 <b>RubyJobs.me</b> - Contribute: <a href="https://github.com/matheusml/rubyjobs">https://github.com/matheusml/rubyjobs</a></p>
     </footer>
   </div>
-</div>
-
 </body>
 </html>
