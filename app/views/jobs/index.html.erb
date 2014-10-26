@@ -3,7 +3,7 @@
     <div class="col-md-4 job-item">
       <div class="caption">
         <span class="label label-primary"><%= job.created_at.strftime("%d/%m/%Y") %></span> <span class="label label-warning"><%= job.location %></span> <%= remote_tag(job.remote) %>
-        <h3><%= job.title  %></h3>
+        <h3><%=h truncate(job.title, :length => 32)  %></h3>
         <p class='company'><strong><%= job.company %></strong></p>
         <%= link_to "Ver detalhes »", job_path(job), :class => "btn btn-info btn-sm btn-job-detail btn-block", :role => "button" %>
       </div>
