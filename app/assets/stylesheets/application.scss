@@ -1,17 +1,49 @@
 @import "twitter/bootstrap";
+@import "variables";
 @import "style";
 @import "navigation";
 @import "header";
 @import "jobs";
+@import "pages/*";
 
 
-#main-section{
+.main-section{
   background-color: #fff;
   box-shadow: 0 0 50px rgba(0,0,0,0.5);
+  padding-bottom: 60px;
+  min-height: 600px;
 }
 
 .btn.btn-ghost {
   border: 2px solid #ffffff;
   color: #ffffff;
   margin: 30px 0 60px 0;
+  padding: 15px 20px;
+}
+
+@media (min-width: 1000px) {
+  .container{
+    padding: 0 10%;
+  }
+}
+
+footer{
+  background: #191919;
+  color: #ffffff;
+  height: 110px;
+  padding: 40px 0;
+  p{
+    display: block;
+    float:left;
+  }
+  .links{
+    display: block;
+    float: right;
+    a{
+      margin: 0 10px;
+      img{
+        width: 25px;
+      }
+    }
+  }
 }

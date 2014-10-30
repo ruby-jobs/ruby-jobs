@@ -1,11 +1,41 @@
-<div class="row">
-  <% @jobs.each do |job| %>
-	  <div class="col-md-4">
-	    <h2><%=h truncate(job.title, :length => 23) %></h2>
-	    <h4><%=h truncate(job.company, :length => 25) %></h4>
-	    <p><%=h truncate(job.location, :length => 25) %></p>
-	    <p><%=h job.created_at.strftime("%d/%m/%Y") %></p>
-	    <p><%= link_to "Ver detalhes »", job_path(job), :class => "btn btn-primary", :role => "button" %></p>
-	  </div>
-  <% end %>
+<header id="home">
+	<div class="container">
+		<%= image_tag "logo-with-banner.png", class: "logo" %>
+		<h2>Esta precisando de um Rubista?</h2>
+		<p> Anuncie sua vaga no RubyJobs e deixe mais de 4000 desenvolvedores saberem da sua vaga. </p>
+		<%= link_to "Anuncie uma vaga!", new_job_path, class: "btn btn-ghost"%>
+	</div>
+</header>
+
+
+<div class="main-section" id="<%= controller_action %>">
+	<div class="container">
+
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="page-header">
+					<h1>Vagas recentes</h1>
+				</div>
+				<table class="jobs-list">
+					<% @jobs.each do |job| %>
+					<tr>
+						<%= content_tag :td, image_tag("job-badge.png"), class: "job-badge" %>
+						<%= content_tag :td, (link_to (truncate(job.title, :length => 23)), job_path(job)), class: "job-title" %>
+						<%= content_tag :td, (truncate(job.company, :length => 23)), class: "job-company" %>
+						<%= content_tag :td, (truncate(job.location, :length => 23)), class: "job-location" %>
+						<%= content_tag :td, (job.created_at.strftime("%d/%m/%Y")), class: "job-date" %>
+					</tr>
+					<% end %>
+				</table>
+				<%= link_to "Ver + vagas", :jobs, class: "show-more-jobs" %>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+			</div>	
+		</div>
+
+	</div>
 </div>

@@ -4,9 +4,12 @@ $(document).ready(function() {
   Header
   ==============================================*/
   
-  // $('#home').height($(window).height()+50);
+  $('#inner').height($(window).height()/3);
   
-  $.backstretch("<%= asset_path('header-home.jpg') %>");
+  $.backstretch([
+      "<%= asset_path('header-home.jpg') %>",
+      "<%= asset_path('header-inside.jpg') %>"
+  ], {duration: 5000, fade: 750});
   
   $(window).scroll( function() {
     var st = $(this).scrollTop(),

@@ -25,6 +25,7 @@ group :development do
   gem 'sqlite3'
   gem 'rubocop', require: false
   gem 'overcommit', require: false
+  gem 'clean_logger'
 end
 
 group :test, :development do

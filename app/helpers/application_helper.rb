@@ -16,4 +16,8 @@ module ApplicationHelper
       #{link_to value[0], value[1]}
     </li>"
   end
+
+  def controller_action
+    "#{params[:controller]}-#{params[:action]}"
+  end
 end
