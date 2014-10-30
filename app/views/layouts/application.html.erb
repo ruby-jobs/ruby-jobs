@@ -10,20 +10,30 @@
   <%= auto_discovery_link_tag :rss, "/feed.rss" %>
 
   <%= favicon_link_tag 'ruby.png' %>
-  <!-- http://fortawesome.github.io/Font-Awesome/ -->
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
 </head>
 <body>
 
   <%= render 'layouts/navbar' %>
+  <header id="home">
+    <div class="container">
+      <%= image_tag "logo-with-banner.png", class: "logo" %>
+      <h2>Esta precisando de um Rubista?</h2>
+      <p> Anuncie sua vaga no RubyJobs e deixe mais de 4000 desenvolvedores saberem da sua vaga. </p>
+      <%= link_to "Anuncie uma vaga!", new_job_path, class: "btn btn-ghost"%>
+    </div>
+  </header>
 
-  <div class="container">
-    <%= yield %>
-    <hr>
-    <footer align="center">
-      <p><%= link_to image_tag("rss_icon.png"), feed_path %> Copyright © 2014 <b>RubyJobs.me</b> - Contribute: <a href="https://github.com/matheusml/rubyjobs">https://github.com/matheusml/rubyjobs</a></p>
-    </footer>
+  <div id="main-section">
+    <div class="container">
+      <%= yield %>
+    </div>
   </div>
+
+  <footer align="center">
+    <p><%= link_to image_tag("rss_icon.png"), feed_path %> Copyright © 2014 <b>RubyJobs.me</b> - Contribute: <a href="https://github.com/matheusml/rubyjobs">https://github.com/matheusml/rubyjobs</a></p>
+  </footer>
+
 </body>
 </html>
