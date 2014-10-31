@@ -1,0 +1,16 @@
+// ===========================
+// Container
+// ===========================
+
+.main-section{
+  background-color: #fff;
+  box-shadow: 0 0 50px rgba(0,0,0,0.5);
+  padding-bottom: 60px;
+  min-height: 600px;
+}
+
+@media (min-width: 1000px) {
+  .container{
+    padding: 0 10%;
+  }
+}
