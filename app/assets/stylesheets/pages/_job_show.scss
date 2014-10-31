@@ -1,0 +1,54 @@
+#jobs-show {
+
+  .page-header{
+    span {
+      margin-right: 15px;
+    }
+    span.job-date {
+      color: #b6bac2;
+    }
+
+    span.job-company {
+    }
+
+    span.job-location {
+      color: $base-color;
+    }
+  }
+
+  .job-description{
+    line-height: 150%;  
+  }
+
+  .do-you-like-it {
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+    padding: 15px 0;
+    margin: 25px 0;
+    img {
+      width: 65px;
+    }
+    p{
+      color: #b6bac2;
+
+      span.email {
+        color: #4578ca;
+        font-weight: bold;
+        text-decoration: underline;
+      }
+
+    }
+  }
+
+  .well{
+    margin: 25px 0;
+    background: $well-color;
+  }
+
+  @media (max-width: 960px) {
+    .do-you-like-it {
+      text-align: center;
+    }
+  }
+
+}

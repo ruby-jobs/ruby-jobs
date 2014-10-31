@@ -11,13 +11,34 @@
         <%= @job.title %>
         <small>subtext</small>
       </h1>
-      <p> <%= @job.created_at.strftime("%d/%m/%Y") %> - <%= @job.company %> - <%= @job.location %>/<%= @job.remote ? "Remoto": "Presencial" %></p>
+      <p> 
+        <%= content_tag :span, @job.company, class: "job-company" %>
+        <%= content_tag :span, "#{@job.location}/#{modality(@job)}", class: "job-location" %>
+        <%= content_tag :span, l(@job.created_at, format: :long), class: "job-date" %>
+      </p>
     </div>
 
-    <%= simple_format @job.description %>
+    <%= simple_format @job.description, class: "job-description" %>
     <%= content_tag :div, @job.skills, class: "well" if @job.skills %>
+    
+    <div class="row do-you-like-it">
+      
+      <div class="col-xs-12 col-sm-12 col-md-1 col-lg-1">
+        <%= image_tag  "logo.png" %>
+      </div>
+      
+      <div class="col-xs-12 col-sm-12 col-md-11 col-lg-11">
+        <h4> Gostou da vaga? </h4>
+        <p>
+          Entre em contato com o responsável pelo email <%= content_tag :span, @job.email, class: "email" %> e caso seja contrado deixe-nos saber! 
+        </p>
+      </div>
+
+    </div>
+
     <%= link_to 'Voltar', root_url, :class => 'btn btn-default' %>
     <%= link_to_twitter @job.title %>
+
   </div>
 </div>
 

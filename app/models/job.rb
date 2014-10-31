@@ -7,4 +7,5 @@ class Job < ActiveRecord::Base
 
   default_scope { order(id: :desc) }
   scope :updated_at_desc, -> { order(updated_at: :desc) }
+
 end
