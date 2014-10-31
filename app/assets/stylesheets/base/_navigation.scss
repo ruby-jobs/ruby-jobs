@@ -1,0 +1,104 @@
+#main-nav .container{
+    padding:0 0 20px;
+}
+
+#main-nav .navbar-brand img{
+    margin-right: 15px;
+    max-width: 60px;
+}
+
+#main-nav .navbar-brand{
+    display: inline-block;
+    font-size:24px;
+    font-weight:700;
+    color: #fff;
+}
+
+.navbar-brand
+{
+    padding:0 10px;
+    font-size:30px;
+    line-height:30px;
+    font-weight:normal;
+    color:#fff;
+}
+
+.navbar-brand span {
+    font-size:24px;
+    font-weight:300;
+}
+
+#main-nav.scrolled .navbar-brand{
+    color:#6d6d6d;
+}
+
+#main-nav{
+    background:transparent;
+    color:#fff;
+    box-shadow:0 0 0px transparent;
+    -webkit-transition:background 0.3s ease-out;
+    transition:background 0.3s ease-out;
+}
+
+#main-nav.scrolled{
+    background:#fff;
+    box-shadow: 0 0 3px rgba(0,0,0,0.2);
+}
+
+#main-nav.scrolled .navbar-toggle{
+    color:#74c7d5;
+    border-color:#74c7d5;
+}
+
+i.fa {
+    color: #fff;
+    font-size: 22px;
+}
+
+#main-nav.scrolled .navbar-toggle .icon-bar{
+    background:#74c7d5;
+}
+
+#main-nav .container{
+    padding:30px 20px;
+    -webkit-transition:padding 0.5s ease-out;
+    transition:padding 0.5s ease-out;
+}
+
+#main-nav.scrolled .container{
+    padding:10px 20px;
+}
+
+#main-nav .nav a,
+#main-nav .nav a:active,
+#main-nav .nav a:hover{
+    padding:0px 10px;
+    font-size:18px;
+    line-height:54px;
+    font-weight:100;
+    background:transparent;
+    color:#fff;
+    transition: color .2s ease-in;
+}
+
+#main-nav.scrolled .nav a,
+#main-nav.scrolled .nav a:active,
+#main-nav.scrolled .nav a:hover{
+    color:#6d6d6d;
+}
+
+#main-nav li{
+    background:transparent;
+    margin:0 10px;
+    border:2px solid transparent;
+}
+
+#main-nav.scrolled .nav li.active a,
+#main-nav.scrolled .nav a:hover{
+    color: #F28C83;
+}
+
+.navbar-header .title {
+  background: image-url("ruby.png") no-repeat 5px;
+  padding-left: 35px;
+}

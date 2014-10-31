@@ -1,0 +1,29 @@
+#home{
+    color: #fff;
+    max-width: 100%;
+    text-align: center;
+    min-height: 500px;
+}
+
+.backstretch img{
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+#home .logo {
+    width: 378px;
+    display: block;
+    margin: 20px auto;
+}
+
+#home h2{
+    margin:0;
+    font-size: 2em;
+}
+
+#home p{
+    padding-top: 20px;
+    font-size: 1.3em;
+    font-weight: 100;
+    margin: 0 25%;
+    letter-spacing: 2px;
+}

@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  root 'jobs#index'
+  root 'home#index'
 
   resources :jobs
+
   match '/feed' => 'jobs#feed',
         :as => :feed,
         :defaults => { format: 'atom' }, via: :get

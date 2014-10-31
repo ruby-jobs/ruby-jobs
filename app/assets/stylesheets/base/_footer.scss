@@ -1,0 +1,20 @@
+footer{
+  background: #191919;
+  color: #ffffff;
+  height: 110px;
+  padding: 40px 0;
+  p{
+    display: block;
+    float:left;
+  }
+  .links{
+    display: block;
+    float: right;
+    a{
+      margin: 0 10px;
+      img{
+        width: 25px;
+      }
+    }
+  }
+}

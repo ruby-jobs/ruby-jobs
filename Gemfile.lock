@@ -54,6 +54,8 @@ GEM
     builder (3.2.2)
     childprocess (0.5.5)
       ffi (~> 1.0, >= 1.0.11)
+    clean_logger (0.0.5)
+      rails
     coderay (1.1.0)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
@@ -197,6 +199,7 @@ PLATFORMS
 DEPENDENCIES
   anjlab-bootstrap-rails!
   bootstrap-kaminari-views
+  clean_logger
   factory_girl (~> 4.0)
   google-analytics-rails
   jbuilder (~> 1.2)

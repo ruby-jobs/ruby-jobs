@@ -1,4 +1,5 @@
 module JobsHelper
+
   def link_to_twitter(title)
     tag_a = []
     url = CGI.escape(request.url)
@@ -11,4 +12,9 @@ module JobsHelper
     tag_a << %(<i class="fa fa-twitter fa-lg"> </i>  Tweet</a>)
     tag_a.join.html_safe
   end
+
+  def modality(job)
+    job.remote ? "Remoto": "Presencial"
+  end
+
 end

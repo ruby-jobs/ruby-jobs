@@ -2,28 +2,22 @@
 <html>
 <head>
   <title>RubyJobs</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all'%>
+  <%= javascript_include_tag 'application'%>
   <%= csrf_meta_tags %>
   <%= analytics_init if Rails.env.production? %>
   <%= auto_discovery_link_tag :atom, "/feed" %>
   <%= auto_discovery_link_tag :rss, "/feed.rss" %>
 
   <%= favicon_link_tag 'ruby.png' %>
-  <!-- http://fortawesome.github.io/Font-Awesome/ -->
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
 </head>
-<body>
+<body id="<%= controller_action %>">
 
   <%= render 'layouts/navbar' %>
-
-  <div class="container">
-    <%= yield %>
-    <hr>
-    <footer align="center">
-      <p><%= link_to image_tag("rss_icon.png"), feed_path %> Copyright © 2014 <b>RubyJobs.me</b> - Contribute: <a href="https://github.com/matheusml/rubyjobs">https://github.com/matheusml/rubyjobs</a></p>
-    </footer>
-  </div>
+  <%= yield %>
+  <%= render "layouts/footer" %>
+  
 </body>
 </html>

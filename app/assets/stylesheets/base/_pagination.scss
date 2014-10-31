@@ -1,0 +1,8 @@
+.pagination > .active > a, .pagination > .active > a:hover, .pagination > .active > a:focus, .pagination > .active > span, .pagination > .active > span:hover, .pagination > .active > span:focus {
+  background-color: $base-color;
+  border-color: $base-color;
+}
+
+.pagination > li > a {
+  color: $base-color;
+}
