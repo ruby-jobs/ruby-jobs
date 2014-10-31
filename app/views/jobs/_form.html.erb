@@ -1,6 +1,7 @@
 <div class="row">
-  <div class="col-md-6">
-  	  <%= simple_form_for @job, wrapper_mappings: {radio_buttons: :vertical_radio_and_checkboxes } do |f| %>
+  <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+  	  
+      <%= simple_form_for @job, wrapper_mappings: {radio_buttons: :vertical_radio_and_checkboxes } do |f| %>
 		  	<%= f.error_notification %>
 				<%= f.input :title, label: "Título", :placeholder => 'Desenvolvedor Ruby on Rails' %>
 				<%= f.input :company,label: "Empresa", :placeholder => 'Empresa S/A' %>
@@ -10,7 +11,8 @@
 				<%= f.input :skills ,label:"Habilidades/Requerimentos", :placeholder => 'Necessário ter experiência com: Ruby, Ruby on Rails ou outro framework MVC.  Desejável: APIs REST, Test Driven Development, MongoDB e GIT'%>
 				<%= f.input :description, label: "Descrição", input_html: {:size => '50x5'}, :placeholder => 'Estamos contratando desenvolvedor Ruby/Rails, que já tenha experiência. Trabalhamos com metodologias ágeis, se tiver esta vivência também é legal =) Não precisa ser do Rio, contratamos pessoas remotas também. ' %>
 				<%= link_to 'Voltar', root_url, :class => 'btn btn-default' %>
-				<%= f.button :submit ,label: "Salvar", class:"btn btn-success" %>
+				<%= f.button :submit ,label: "Salvar", class: "btn btn-success" %>
 	  	<% end %>
+
   </div>
 </div>
