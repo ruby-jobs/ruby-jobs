@@ -3,15 +3,15 @@
   	  
       <%= simple_form_for @job, wrapper_mappings: {radio_buttons: :vertical_radio_and_checkboxes } do |f| %>
 		  	<%= f.error_notification %>
-				<%= f.input :title, label: "Título", :placeholder => 'Desenvolvedor Ruby on Rails' %>
-				<%= f.input :company,label: "Empresa", :placeholder => 'Empresa S/A' %>
-				<%= f.input :remote,label: "Esse job pode ser feito remotamente?", as: :radio_buttons,collection: [["Sim", true], ["Não", false]] %>
-				<%= f.input :location, label:"Localização", :placeholder => 'Rio de Janeiro - RJ'%>
-				<%= f.input :email, label: "E-mail para contato",:placeholder => 'contato@empresa.com' %>
-				<%= f.input :skills ,label:"Habilidades/Requerimentos", :placeholder => 'Necessário ter experiência com: Ruby, Ruby on Rails ou outro framework MVC.  Desejável: APIs REST, Test Driven Development, MongoDB e GIT'%>
-				<%= f.input :description, label: "Descrição", input_html: {:size => '50x5'}, :placeholder => 'Estamos contratando desenvolvedor Ruby/Rails, que já tenha experiência. Trabalhamos com metodologias ágeis, se tiver esta vivência também é legal =) Não precisa ser do Rio, contratamos pessoas remotas também. ' %>
+				<%= f.input :title %>
+				<%= f.input :company %>
+				<%= f.input :remote, as: :radio_buttons, collection: [["Sim", true], ["Não", false]] %>
+				<%= f.input :location %>
+				<%= f.input :email %>
+				<%= f.input :skills %>
+				<%= f.input :description, input_html: {:size => '50x5'} %>
 				<%= link_to 'Voltar', root_url, :class => 'btn btn-default' %>
-				<%= f.button :submit ,label: "Salvar", class: "btn btn-success" %>
+				<%= f.button :submit ,label: "Salvar", class: "btn btn-brand" %>
 	  	<% end %>
 
   </div>

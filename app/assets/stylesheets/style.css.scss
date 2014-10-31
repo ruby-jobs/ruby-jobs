@@ -6,3 +6,9 @@
   background: image-url("ruby.png") no-repeat 5px;
   padding-left: 35px;
 }
+
+.btn-brand {
+  color: white;
+  background-color: $base-color;
+  border-color: darken($base-color, 10%);
+}
