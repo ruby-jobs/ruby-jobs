@@ -14,11 +14,9 @@ table.jobs-list{
       border-left-color: $base-color;
     }
   }
-  tr:hover{
-    border-left: 5px solid $base-color;
-  }
   td{
     width: 25%;
+
   }
   td.job-badge{
     width: 10%;
@@ -45,5 +43,8 @@ table.jobs-list{
 }
 
 a.show-more-jobs{
+  color: $blue;
+  text-decoration: underline;
+  margin-top: 20px;
   float: right;
 }

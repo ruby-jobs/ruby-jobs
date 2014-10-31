@@ -2,17 +2,16 @@
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#site-nav">
-        <%= image_tag "collapse-menu.png" %>
+        <i class="fa fa-bars"></i>
       </button>
-      <%= link_to 'Ruby Jobs', root_path, class: 'navbar-brand title' %>
+      <%= link_to (image_tag "logo.png"), root_path, class: 'navbar-brand' %>
     </div>
 
     <div id="site-nav" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
        <%= navbar(
         ['Vagas', jobs_path],
-        ['Anuncie', new_job_path],
-        ['API', nil]
+        ['Anuncie', new_job_path]
         ).html_safe %>
       </ul>
     </div>
