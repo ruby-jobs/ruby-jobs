@@ -14,6 +14,10 @@ table.jobs-list{
       border-left-color: $base-color;
     }
   }
+  tr.remoto:hover{
+    border-left-color: $secondary-color;
+  }
+
   td{
     width: 25%;
 
@@ -21,6 +25,9 @@ table.jobs-list{
   td.job-badge{
     width: 10%;
     padding-left: 20px;
+    img {
+      width: 2em;
+    }
   }
   td.job-title {
     padding-left: 20px;
