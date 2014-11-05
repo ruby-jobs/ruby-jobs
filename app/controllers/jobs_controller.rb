@@ -1,6 +1,9 @@
 class JobsController < ApplicationController
   def index
-    @jobs = Job.page(params[:page]).per(9)
+    respond_to do |format|
+      format.html
+      format.json { @jobs = Job.page(params[:page]).per(4) }
+    end
   end
 
   def new

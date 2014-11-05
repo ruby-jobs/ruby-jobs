@@ -3,33 +3,57 @@
   </div>
 </header>
 
-<div class="main-section" id="<%= controller_action %>">
+<div class="main-section" id="<%= controller_action %>" ng-controller="JobsCtrl">
   <div class="container">
 
     <div class="row">
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
         <div class="page-header">
-          <h1>Vagas recentes</h1>
+          <h1>Confira as vagas que estão esperando por você! </h1>
         </div>
-        <div class="table-responsive">
-        <table class="jobs-list">
-          <% @jobs.each do |job| %>
-          <tr class="<%= modality(job).parameterize %>">
-            <%= content_tag :td, image_tag(job.badge), class: "job-badge" %>
-            <%= content_tag :td, (link_to (truncate(job.title, :length => 23)), job_path(job)), class: "job-title" %>
-            <%= content_tag :td, (truncate(job.company, :length => 23)), class: "job-company" %>
-            <%= content_tag :td, (truncate(job.location, :length => 23)), class: "job-location" %>
-            <td class="job-date <%= badger(job) %>" data-badger="<%= modality_badger(job) %>">
-              <%= job.created_at.strftime("%d/%m/%Y") %>
-            </td> 
-          </tr>
-          <% end %>
-        </table>
-        </div>
-        <div align="center">
-          <%= paginate @jobs, :theme => 'twitter-bootstrap-3' %>
+        
+        <div class="row filters">
+          <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+            <div class="form-group">
+              <div class="input-group">
+                <input type="text" placeholder="Que tipo de trabalho você esta procurando?" ng-model="search" class="form-control">
+                <div class="input-group-addon"><i class="glyphicon glyphicon-search"></i></div>
+              </div>
+            </div>  
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+            <div class="form-group">
+              <select ng-model="modality" class="form-control">
+                <option value=""> Escolha a modalidade </option>
+                <option value="Remoto"> Remoto </option>
+                <option value="Presencial"> Presencial </option>
+              </select>
+            </div>
+          </div>
         </div>
 
+        <table class="jobs-list">
+          <tbody infinite-scroll="loadMore()" infinite-scroll-distance="3">
+            <tr class="{{::job.modality.toLowerCase()}}" ng-repeat="job in jobs | filter:search | filter:modality ">
+              <td class="job-badge"><img ng-src="{{::job.badge}}"></td>
+              <td class="job-title"><a ng-href="{{::job.url}}">{{::job.title}}</a></td>
+              <td class="job-company">{{::job.company}}</td>
+              <td class="job-location"> {{::job.location}} </td>
+              <td class="job-date badger-right" data-badger="{{job.modality}}">
+                {{job.posted_at | date}}
+              </td> 
+            </tr>
+          </tbody>
+        </table>
+        
+        <div class="spinner" ng-show="loading">
+          <div class="rect1"></div>
+          <div class="rect2"></div>
+          <div class="rect3"></div>
+          <div class="rect4"></div>
+          <div class="rect5"></div>
+        </div>
+        
       </div>
     </div>
 
