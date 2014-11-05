@@ -18,23 +18,19 @@
 				</div>
 				<table class="jobs-list">
 					<% @jobs.each do |job| %>
-					<tr>
-						<%= content_tag :td, image_tag("job-badge.png"), class: "job-badge" %>
-						<%= content_tag :td, (link_to (truncate(job.title, :length => 20)), job_path(job)), class: "job-title" %>
-						<%= content_tag :td, (truncate(job.company, :length => 20)), class: "job-company" %>
-						<%= content_tag :td, (truncate(job.location, :length => 20)), class: "job-location" %>
-						<%= content_tag :td, (job.created_at.strftime("%d/%m/%Y")), class: "job-date" %>
+					<tr class="<%= modality(job).parameterize %>">
+						<%= content_tag :td, image_tag(job.badge), class: "job-badge" %>
+						<%= content_tag :td, (link_to (truncate(job.title, :length => 23)), job_path(job)), class: "job-title" %>
+						<%= content_tag :td, (truncate(job.company, :length => 23)), class: "job-company" %>
+						<%= content_tag :td, (truncate(job.location, :length => 23)), class: "job-location" %>
+						<td class="job-date <%= badger(job) %>" data-badger="<%= modality_badger(job) %>">
+              <%= job.created_at.strftime("%d/%m/%Y") %>
+            </td> 
 					</tr>
 					<% end %>
 				</table>
 				<%= link_to "Ver + vagas", :jobs, class: "show-more-jobs" %>
 			</div>
-		</div>
-
-		<div class="row">
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-
-			</div>	
 		</div>
 
 	</div>

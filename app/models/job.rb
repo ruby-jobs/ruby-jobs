@@ -8,4 +8,8 @@ class Job < ActiveRecord::Base
   default_scope { order(id: :desc) }
   scope :updated_at_desc, -> { order(updated_at: :desc) }
 
+  def badge
+    remote? ? "remoto-badge.png" : "presencial-badge.png"
+  end
+
 end
