@@ -17,4 +17,12 @@ module JobsHelper
     job.remote ? "Remoto": "Presencial"
   end
 
+  def badger(job)
+    'badger-right' if job.remote
+  end
+
+  def modality_badger(job)
+    modality(job) if job.remote?
+  end
+
 end

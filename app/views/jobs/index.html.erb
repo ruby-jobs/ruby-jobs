@@ -15,19 +15,13 @@
         <table class="jobs-list">
           <% @jobs.each do |job| %>
           <tr class="<%= modality(job).parameterize %>">
-
-            <td class="job-badge">
-              <%= image_tag("#{modality(job).parameterize}-badge.png") %>
-            </td>
-
+            <%= content_tag :td, image_tag(job.badge), class: "job-badge" %>
             <%= content_tag :td, (link_to (truncate(job.title, :length => 23)), job_path(job)), class: "job-title" %>
             <%= content_tag :td, (truncate(job.company, :length => 23)), class: "job-company" %>
             <%= content_tag :td, (truncate(job.location, :length => 23)), class: "job-location" %>
-            
-            <td class="job-date <%= 'badger-right' if job.remote %>" data-badger="<%= modality(job) if job.remote %>">
+            <td class="job-date <%= badger(job) %>" data-badger="<%= modality_badger(job) %>">
               <%= job.created_at.strftime("%d/%m/%Y") %>
             </td> 
-
           </tr>
           <% end %>
         </table>
@@ -37,12 +31,6 @@
         </div>
 
       </div>
-    </div>
-
-    <div class="row">
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-
-      </div>  
     </div>
 
   </div>
