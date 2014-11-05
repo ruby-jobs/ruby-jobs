@@ -23,7 +23,9 @@
 						<%= content_tag :td, (link_to (truncate(job.title, :length => 23)), job_path(job)), class: "job-title" %>
 						<%= content_tag :td, (truncate(job.company, :length => 23)), class: "job-company" %>
 						<%= content_tag :td, (truncate(job.location, :length => 23)), class: "job-location" %>
-						<%= content_tag :td, (job.created_at.strftime("%d/%m/%Y")), class: "job-date" %>
+						<td class="job-date <%= 'badger-right' if job.remote %>" data-badger="<%= modality(job) if job.remote %>">
+              <%= job.created_at.strftime("%d/%m/%Y") %>
+            </td> 
 					</tr>
 					<% end %>
 				</table>

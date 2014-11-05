@@ -11,17 +11,27 @@
         <div class="page-header">
           <h1>Vagas recentes</h1>
         </div>
+        <div class="table-responsive">
         <table class="jobs-list">
           <% @jobs.each do |job| %>
           <tr class="<%= modality(job).parameterize %>">
-            <%= content_tag :td, image_tag("#{modality(job).parameterize}-badge.png"), class: "job-badge" %>
+
+            <td class="job-badge">
+              <%= image_tag("#{modality(job).parameterize}-badge.png") %>
+            </td>
+
             <%= content_tag :td, (link_to (truncate(job.title, :length => 23)), job_path(job)), class: "job-title" %>
             <%= content_tag :td, (truncate(job.company, :length => 23)), class: "job-company" %>
             <%= content_tag :td, (truncate(job.location, :length => 23)), class: "job-location" %>
-            <%= content_tag :td, (job.created_at.strftime("%d/%m/%Y")), class: "job-date" %>
+            
+            <td class="job-date <%= 'badger-right' if job.remote %>" data-badger="<%= modality(job) if job.remote %>">
+              <%= job.created_at.strftime("%d/%m/%Y") %>
+            </td> 
+
           </tr>
           <% end %>
         </table>
+        </div>
         <div align="center">
           <%= paginate @jobs, :theme => 'twitter-bootstrap-3' %>
         </div>

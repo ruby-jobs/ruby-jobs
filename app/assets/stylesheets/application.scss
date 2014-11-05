@@ -2,3 +2,30 @@
 @import "variables";
 @import "base/*";
 @import "pages/*";
+
+/* Badger
+------------------------- */
+
+[class*="badger"] {
+    position: relative;
+    top: 0;
+
+}
+
+[class*="badger"]:after {
+    content: attr(data-badger);
+    position: absolute;
+    top: 0;
+    padding: 3px 15px;
+    font-size: 12px;
+    font-weight: bold;
+    background: #999;
+    color: #fff;
+    background: $base-color;
+}
+
+
+.badger-right:after {
+    right: 0;
+    border-radius: 0 0 0 6px;
+}

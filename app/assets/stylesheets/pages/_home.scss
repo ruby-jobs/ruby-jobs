@@ -1,5 +1,8 @@
-.page-header h1{
-  color: $title-color;  
+.page-header {
+  border: 0px;
+  h1{
+    color: $title-color;  
+  }
 }
 
 table.jobs-list{
@@ -12,6 +15,9 @@ table.jobs-list{
       border-top: 1px solid $border-color;
       background: #fbfbfb;
       border-left-color: $base-color;
+    }
+    &:first-child {
+      border-top: 1px solid $border-color;
     }
   }
   tr.remoto:hover{
