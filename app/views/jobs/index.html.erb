@@ -39,10 +39,9 @@
               <td class="job-title"><a ng-href="{{::job.url}}">{{::job.title}}</a></td>
               <td class="job-company">{{::job.company}}</td>
               <td class="job-location"> {{::job.location}} </td>
-              <td class="job-date">{{::job.posted_at | date }}</td>
-              <td class="job-date" ng-class="badger-right: job.modality == 'Remoto'" data-badger="{{job.modality}}">
-              <%= job.created_at.strftime("%d/%m/%Y") %>
-            </td> 
+              <td class="job-date badger-right" data-badger="{{job.modality}}">
+                {{job.posted_at | date}}
+              </td> 
             </tr>
           </tbody>
         </table>
