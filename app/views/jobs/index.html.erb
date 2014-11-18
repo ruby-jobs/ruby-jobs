@@ -34,7 +34,7 @@
 
         <table class="jobs-list">
           <tbody infinite-scroll="loadMore()" infinite-scroll-distance="3">
-            <tr class="{{::job.modality.toLowerCase()}}" ng-repeat="job in jobs | filter:search | filter:modality ">
+            <tr class="{{::job.modality.toLowerCase()}}" ng-repeat="job in jobs | filter:modality | filter:search">
               <td class="job-badge"><img ng-src="{{::job.badge}}"></td>
               <td class="job-title"><a ng-href="{{::job.url}}">{{::job.title}}</a></td>
               <td class="job-company">{{::job.company}}</td>
