@@ -7,7 +7,7 @@ class JobsController < ApplicationController
   end
 
   def new
-    @job = Job.new(remote: false)
+    @job = Job.new
   end
 
   def create
@@ -46,6 +46,6 @@ class JobsController < ApplicationController
   private
 
   def job_params
-    params.require(:job).permit(:title, :email, :company, :skills, :location, :description, :remote)
+    params.require(:job).permit(:title, :email, :company, :skills, :location, :description, :modality)
   end
 end

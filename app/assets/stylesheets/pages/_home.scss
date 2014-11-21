@@ -1,7 +1,7 @@
 .page-header {
   border: 0px;
   h1{
-    color: $title-color;  
+    color: $title-color;
   }
 }
 
@@ -20,8 +20,17 @@ table.jobs-list{
       border-top: 1px solid $border-color;
     }
   }
-  tr.remoto:hover{
-    border-left-color: $secondary-color;
+  tr.presencial:hover{
+    border-left-color: $presencial-color;
+  }
+  tr.remote:hover{
+    border-left-color: $remote-color;
+  }
+  tr.freela:hover{
+    border-left-color: $freela-color;
+  }
+  tr.trainee:hover{
+    border-left-color: $trainee-color;
   }
 
   td{
