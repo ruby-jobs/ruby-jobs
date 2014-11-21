@@ -12,7 +12,7 @@
       </h1>
       <p> 
         <%= content_tag :span, @job.company, class: "job-company" %>
-        <%= content_tag :span, "#{@job.location}/#{modality(@job)}", class: "job-location" %>
+        <%= content_tag :span, "#{@job.location}/#{@job.modality_name}", class: "job-location" %>
         <%= content_tag :span, l(@job.created_at, format: :long), class: "job-date" %>
       </p>
     </div>
