@@ -21,3 +21,19 @@
     right: 0;
     border-radius: 0 0 0 6px;
 }
+
+.badger-presencial:after {
+    background: $presencial-color !important;
+}
+
+.badger-remote:after {
+    background: $remote-color !important;
+}
+
+.badger-freela:after {
+    background: $freela-color !important;
+}
+
+.badger-trainee:after {
+    background: $trainee-color !important;
+}

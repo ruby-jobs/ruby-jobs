@@ -4,7 +4,7 @@ pt-BR:
       job:
         title: "Título"
         company: "Empresa"
-        remote: "Esse job pode ser feito remotamente?"
+        modality: "Qual é a modalidade de trabalho?"
         location: "Localização"
         email: "E-mail para contato"
         skills: "Habilidades/Requerimentos"

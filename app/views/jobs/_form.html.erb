@@ -1,11 +1,11 @@
 <div class="row">
   <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
-  	  
+
       <%= simple_form_for @job, wrapper_mappings: {radio_buttons: :vertical_radio_and_checkboxes } do |f| %>
 		  	<%= f.error_notification %>
 				<%= f.input :title %>
 				<%= f.input :company %>
-				<%= f.input :remote, as: :radio_buttons, collection: [["Sim", true], ["Não", false]] %>
+        <%= f.input :modality, as: :radio_buttons, collection: modalities_hash %>
 				<%= f.input :location %>
 				<%= f.input :email %>
 				<%= f.input :skills %>

@@ -13,16 +13,8 @@ module JobsHelper
     tag_a.join.html_safe
   end
 
-  def modality(job)
-    job.remote ? "Remoto": "Presencial"
-  end
-
-  def badger(job)
-    'badger-right' if job.remote
-  end
-
-  def modality_badger(job)
-    modality(job) if job.remote?
+  def modalities_hash
+    {'Presencial' => :presencial, 'Remoto' => :remote, 'Freela' => :freela, 'Trainee' => :trainee}
   end
 
 end

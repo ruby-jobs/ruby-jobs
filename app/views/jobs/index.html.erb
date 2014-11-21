@@ -11,7 +11,7 @@
         <div class="page-header">
           <h1>Confira as vagas que estão esperando por você! </h1>
         </div>
-        
+
         <div class="row filters">
           <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
             <div class="form-group">
@@ -19,14 +19,16 @@
                 <input type="text" placeholder="Que tipo de trabalho você esta procurando?" ng-model="search" class="form-control">
                 <div class="input-group-addon"><i class="glyphicon glyphicon-search"></i></div>
               </div>
-            </div>  
+            </div>
           </div>
           <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
             <div class="form-group">
               <select ng-model="modality" class="form-control">
                 <option value=""> Escolha a modalidade </option>
-                <option value="Remoto"> Remoto </option>
-                <option value="Presencial"> Presencial </option>
+                <option value="remote"> Remoto </option>
+                <option value="presencial"> Presencial </option>
+                <option value="freela"> Freela </option>
+                <option value="trainee"> Trainee </option>
               </select>
             </div>
           </div>
@@ -34,18 +36,18 @@
 
         <table class="jobs-list">
           <tbody infinite-scroll="loadMore()" infinite-scroll-distance="3">
-            <tr class="{{::job.modality.toLowerCase()}}" ng-repeat="job in jobs | filter:modality | filter:search">
+            <tr class="{{::job.modality}}" ng-repeat="job in jobs | filter:modality | filter:search">
               <td class="job-badge"><img ng-src="{{::job.badge}}"></td>
               <td class="job-title"><a ng-href="{{::job.url}}">{{::job.title}}</a></td>
               <td class="job-company">{{::job.company}}</td>
               <td class="job-location"> {{::job.location}} </td>
-              <td class="job-date badger-right" data-badger="{{job.modality}}">
+              <td class="job-date badger-right badger-{{::job.modality}}" data-badger="{{job.modality_name}}">
                 {{job.posted_at | date}}
-              </td> 
+              </td>
             </tr>
           </tbody>
         </table>
-        
+
         <div class="spinner" ng-show="loading">
           <div class="rect1"></div>
           <div class="rect2"></div>
@@ -53,7 +55,7 @@
           <div class="rect4"></div>
           <div class="rect5"></div>
         </div>
-        
+
       </div>
     </div>
 

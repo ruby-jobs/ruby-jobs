@@ -9,10 +9,6 @@ describe Job do
       it { expect(subject).to validate_presence_of(:company) }
     end
 
-    context 'inclusion of' do
-      it { expect(subject).to validate_inclusion_of(:remote).in_array([true, false]) }
-    end
-
     context 'format_of' do
       it { expect(subject).to allow_value('me@email.com').for(:email) }
       it { expect(subject).not_to allow_value('m@e.com').for(:email) }
