@@ -15,6 +15,7 @@ pt-BR:
         company: "Empresa S/A"
         location: 'Rio de Janeiro - RJ'
         email: 'contato@empresa.com'
+        website: 'http://www.seusite.com.br'
         skills: 'Necessário ter experiência com: Ruby, Ruby on Rails ou outro framework MVC.  Desejável: APIs REST, Test Driven Development, MongoDB e GIT'
         description: 'Estamos contratando desenvolvedor Ruby/Rails, que já tenha experiência. Trabalhamos com metodologias ágeis, se tiver esta vivência também é legal =) Não precisa ser do Rio, contratamos pessoas remotas também. '
     include_blanks:
