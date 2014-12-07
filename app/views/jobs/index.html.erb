@@ -39,7 +39,14 @@
             <tr class="{{::job.modality}}" ng-repeat="job in jobs | filter:modality | filter:search">
               <td class="job-badge"><img ng-src="{{::job.badge}}"></td>
               <td class="job-title"><a ng-href="{{::job.url}}">{{::job.title}}</a></td>
-              <td class="job-company">{{::job.company}}</td>
+              <td class="job-company">
+                <a ng-href="{{::job.website}}" ng-if="job.website">
+                  {{::job.company}}
+                </a>
+                <span ng-if="!job.website">
+                  {{::job.company}}
+                </span>
+              </td>
               <td class="job-location"> {{::job.location}} </td>
               <td class="job-date badger-right badger-{{::job.modality}}" data-badger="{{job.modality_name}}">
                 {{job.posted_at | date}}

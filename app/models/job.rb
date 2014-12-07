@@ -3,6 +3,7 @@ class Job < ActiveRecord::Base
 
   validates :title, :description, :email, :company, presence: true
   validates :email, format: { with: /\A[a-z]([\.\-]?\w+)+@[a-z]([\.\-]?\w+){2,}\Z/ }
+  validates :website, format: { with: URI.regexp }, allow_blank: true
 
   default_scope { order(id: :desc) }
   scope :updated_at_desc, -> { order(updated_at: :desc) }
