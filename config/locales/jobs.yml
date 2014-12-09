@@ -1,4 +1,12 @@
 pt-BR:
+  activerecord:
+    errors:
+      models:
+        job:
+          attributes:
+            website:
+              invalid: "Formato inválido. Exemplo de formato permitido: http://www.nomedosite.com"
+
   simple_form:
     labels:
       job:
