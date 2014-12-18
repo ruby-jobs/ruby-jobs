@@ -17,6 +17,7 @@ gem 'anjlab-bootstrap-rails', require: 'bootstrap-rails',
                               branch: '3.0.0'
 
 gem 'angularjs-rails'
+gem 'redcarpet'
 
 group :production do
   gem 'pg'
@@ -39,4 +40,5 @@ group :test do
   gem 'shoulda-matchers'
   gem 'factory_girl', '~> 4.0'
   gem 'simplecov', require: false
+  gem 'capybara'
 end

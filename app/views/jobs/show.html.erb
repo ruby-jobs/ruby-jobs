@@ -19,11 +19,13 @@
       </p>
     </div>
 
-    <%= simple_format @job.description, class: "job-description" %>
+    <div class="job-description">
+      <%= markdown @job.description %>
+    </div>
 
-    <%= content_tag :div, class: "well" do %>
+    <%= content_tag :div, class: "well skills" do %>
       <h4> Habilidades </h4>
-      <%= @job.skills %>
+      <%= markdown @job.skills %>
     <% end if @job.skills %>
 
     <div class="row do-you-like-it">
