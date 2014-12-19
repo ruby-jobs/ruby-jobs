@@ -23,7 +23,7 @@
           </div>
           <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
             <div class="form-group">
-              <select ng-model="modality" class="form-control">
+              <select ng-model="modality" ng-change="filter()" class="form-control">
                 <option value=""> Escolha a modalidade </option>
                 <option value="remote"> Remoto </option>
                 <option value="presencial"> Presencial </option>
@@ -36,7 +36,7 @@
 
         <table class="jobs-list">
           <tbody infinite-scroll="loadMore()" infinite-scroll-distance="3">
-            <tr class="{{::job.modality}}" ng-repeat="job in jobs | filter:modality | filter:search">
+            <tr class="{{::job.modality}}" ng-repeat="job in jobs | filter:search">
               <td class="job-badge"><img ng-src="{{::job.badge}}"></td>
               <td class="job-title"><a ng-href="{{::job.url}}">{{::job.title}}</a></td>
               <td class="job-company">

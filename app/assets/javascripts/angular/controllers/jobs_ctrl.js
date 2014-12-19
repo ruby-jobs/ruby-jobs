@@ -3,7 +3,6 @@ app.controller('JobsCtrl', ['Job','$scope', function (Job, $scope){
   var page = 1;
   var loadingMore = true;
   var hasMorePage = true;
-  
 
   $scope.jobs = [];
 
@@ -11,7 +10,9 @@ app.controller('JobsCtrl', ['Job','$scope', function (Job, $scope){
     $scope.loading = true;
     
     loadingMore = true;
-    var jobs = Job.query({page: page}, function () {
+
+    var params = { page: page, modality: $scope.modality };
+    var jobs = Job.query(params, function () {
       angular.forEach(jobs, function (job) { $scope.jobs.push(job); });
 
       hasMorePage = jobs.length > 0;
@@ -28,5 +29,9 @@ app.controller('JobsCtrl', ['Job','$scope', function (Job, $scope){
     $scope.load();
   };
 
-  
+  $scope.filter = function() {
+    $scope.jobs = [];
+    page = 1;
+    $scope.load();
+  };
 }]);
