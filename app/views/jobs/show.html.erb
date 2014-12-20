@@ -26,7 +26,7 @@
     <%= content_tag :div, class: "well skills" do %>
       <h4> Habilidades </h4>
       <%= markdown @job.skills %>
-    <% end if @job.skills %>
+    <% end if @job.skills.present? %>
 
     <div class="row do-you-like-it">
 
