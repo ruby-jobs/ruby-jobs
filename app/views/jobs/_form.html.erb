@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+  <div class="col-xs-12 col-md-10 col-md-offset-1">
     <%= simple_form_for @job, wrapper_mappings: { radio_buttons: :vertical_radio_and_checkboxes } do |f| %>
       <%= f.error_notification %>
       <%= f.input :title %>
@@ -9,7 +9,30 @@
       <%= f.input :email %>
       <%= f.input :website, as: :url %>
       <%= f.input :skills %>
-      <%= f.input :description, input_html: { :size => '50x5' } %>
+      <%= f.label :description %>
+      <div id="description-editor" class="markdown-editor">
+        <ul class="nav nav-tabs" data-tabs="tabs">
+          <li class="active">
+            <a href="#text" data-toggle="tab">Texto</a>
+          </li>
+          <li>
+            <a href="#preview" data-toggle="tab">Preview</a>
+          </li>
+          <li class="tab-right">
+            <a target="_blank" href="https://guides.github.com/features/mastering-markdown/">
+              markdow
+            </a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="text">
+            <%= f.input :description, input_html: { :size => '50x5', 'v-model' => 'description' }, label: false %>
+          </div>
+          <div class="tab-pane" id="preview">
+            <div class="preview" v-html="description | marked"></div>
+          </div>
+        </div>
+      </div>
       <%= link_to 'Voltar', root_url, :class => 'btn btn-default' %>
       <%= f.button :submit, label: "Salvar", class: "btn btn-brand" %>
     <% end %>

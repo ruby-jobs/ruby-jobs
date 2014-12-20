@@ -36,5 +36,4 @@ describe Job do
     subject(:job) { build(:job, email: 'm@e.com') }
     it { expect(job).not_to be_valid }
   end
-
 end

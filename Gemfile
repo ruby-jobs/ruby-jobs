@@ -18,6 +18,8 @@ gem 'anjlab-bootstrap-rails', require: 'bootstrap-rails',
 
 gem 'angularjs-rails'
 gem 'redcarpet'
+gem 'marked-rails'
+gem 'vuejs-rails'
 
 group :production do
   gem 'pg'
