@@ -1,0 +1,26 @@
+.markdown-editor {
+  border-bottom: 1px solid #eaeaea;
+  margin-bottom: 15px;
+
+  ul {
+    background-color: #f7f7f7;
+    border-radius: 2px;
+  }
+
+  textarea {
+    margin-top: 15px;
+  }
+
+  .preview {
+    padding: 15px;
+  }
+
+  .tab-right {
+    float: right;
+
+    a:hover {
+      background-color: transparent;
+      border: 1px solid transparent;
+    }
+  }
+}
