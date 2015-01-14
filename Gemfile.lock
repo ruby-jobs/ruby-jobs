@@ -71,12 +71,16 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.8.0)
+    database_cleaner (1.2.0)
     diff-lcs (1.2.5)
     docile (1.1.5)
     erubis (2.7.0)
     execjs (2.2.1)
+    fabrication (2.11.3)
     factory_girl (4.4.0)
       activesupport (>= 3.0.0)
+    faker (1.4.3)
+      i18n (~> 0.5)
     ffi (1.9.6)
     google-analytics-rails (0.0.6)
     hike (1.2.3)
@@ -217,7 +221,10 @@ DEPENDENCIES
   bootstrap-kaminari-views
   capybara
   clean_logger
+  database_cleaner (= 1.2.0)
+  fabrication
   factory_girl (~> 4.0)
+  faker
   google-analytics-rails
   jbuilder (~> 1.2)
   jquery-rails

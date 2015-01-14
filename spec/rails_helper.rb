@@ -28,7 +28,8 @@ RSpec.configure do |config|
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false
   # instead of true.
-  config.use_transactional_fixtures = true
+  # Transactional_fixtures set to false so database cleaner can work properly
+  config.use_transactional_fixtures = false
   config.global_fixtures = :all
 
   # RSpec Rails can automatically mix in different behaviours to your tests

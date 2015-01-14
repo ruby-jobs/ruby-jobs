@@ -36,6 +36,8 @@ end
 group :test, :development do
   gem 'pry-rails'
   gem 'rspec-rails', '~> 3.1.0'
+  gem 'fabrication'
+  gem 'faker'
 end
 
 group :test do
@@ -43,4 +45,5 @@ group :test do
   gem 'factory_girl', '~> 4.0'
   gem 'simplecov', require: false
   gem 'capybara'
+  gem 'database_cleaner', '1.2.0'
 end
