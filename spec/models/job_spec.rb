@@ -15,6 +15,22 @@ describe Job do
       it { expect(subject).to allow_value('http://www.site.com').for(:website) }
       it { expect(subject).not_to allow_value('site.com').for(:website) }
     end
+
+    context 'when max_salary isnt zero' do
+      it 'not allow min_salary to be equal zero' do
+        allow(subject).to receive(:max_salary) { 1000 }
+        allow(subject).to receive(:min_salary) { 0 }
+        expect(subject).to_not allow_value(0).for(:min_salary)
+      end
+    end
+
+    context 'when min_salary isnt zero' do
+      it 'not allow max_salary to be equal 0' do
+        allow(subject).to receive(:min_salary) { 1000 }
+        allow(subject).to receive(:max_salary) { 0 }
+        expect(subject).to_not allow_value(0).for(:max_salary)
+      end
+    end
   end
 
   context 'when job is valid' do
