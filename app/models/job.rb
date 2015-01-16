@@ -1,6 +1,11 @@
 class Job < ActiveRecord::Base
   include Sluggable
 
+  usar_como_dinheiro :min_salary, :max_salary
+
+  validates :min_salary, numericality: { greater_than: 0 }, unless: 'max_salary.zero?'
+  validates :max_salary, numericality: { greater_than: 0 }, unless: 'min_salary.zero?'
+
   validates :title, :description, :email, :company, presence: true
   validates :email, format: { with: /\A[a-z]([\.\-]?\w+)+@[a-z]([\.\-]?\w+){2,}\Z/ }
   validates :website, format: { with: URI.regexp }, allow_blank: true
@@ -18,6 +23,4 @@ class Job < ActiveRecord::Base
   def modality_name
     ['Presencial', 'Remoto', 'Freela', 'Trainee'][Job.modalities[modality]]
   end
-
-
 end

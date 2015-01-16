@@ -10,7 +10,10 @@
       <%= f.input :website, as: :url %>
       <%= f.input :skills %>
       <%= f.input :description %>
-      
+      <div class="row">
+      <%= f.input :min_salary, wrapper_html: { class: "col-xs-4" }%>
+      <%= f.input :max_salary, wrapper_html: { class: "col-xs-4" }%>
+      </div>
       <!--
       <%= f.label :description %>
       <div id="description-editor" class="markdown-editor">
@@ -32,7 +35,7 @@
         </div>
       </div>
       -->
-      
+
       <%= link_to 'Voltar', root_url, :class => 'btn btn-default' %>
       <%= f.button :submit, label: "Salvar", class: "btn btn-brand" %>
     <% end %>

@@ -1,5 +1,4 @@
 module JobsHelper
-
   def link_to_twitter(title)
     tag_a = []
     url = CGI.escape(request.url)
@@ -17,4 +16,7 @@ module JobsHelper
     {'Presencial' => :presencial, 'Remoto' => :remote, 'Freela' => :freela, 'Trainee' => :trainee}
   end
 
+  def salary?(job)
+    job.min_salary > 0 && job.max_salary > 0
+  end
 end
