@@ -20,6 +20,7 @@ gem 'angularjs-rails'
 gem 'redcarpet'
 gem 'marked-rails'
 gem 'vuejs-rails'
+gem 'brazilian-rails'
 
 group :production do
   gem 'pg'
