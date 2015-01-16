@@ -17,6 +17,8 @@ pt-BR:
         email: "E-mail para contato"
         skills: "Habilidades/Requerimentos"
         description: "Descrição"
+        min_salary: "Salário (de)"
+        max_salary: "Salário (até)"
     placeholders:
       job:
         title: "Desenvolvedor Ruby on Rails"
