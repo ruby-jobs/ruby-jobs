@@ -42,14 +42,4 @@ describe Job do
     subject(:job) { build(:job, email: 'm@e.com') }
     it { expect(job).not_to be_valid }
   end
-
-  context 'when job is valid' do
-    subject(:job) { build(:job) }
-    it { expect(job).to be_valid }
-  end
-
-  context 'when job is not valid' do
-    subject(:job) { build(:job, email: 'm@e.com') }
-    it { expect(job).not_to be_valid }
-  end
 end
