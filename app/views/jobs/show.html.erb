@@ -24,8 +24,8 @@
     </div>
 
     <%= content_tag :div do %>
-      Salário <%= @job.min_salary.real_contabil %> - <%= @job.max_salary.real_contabil %>
-    <% end if salary?(@job) %>
+      Salário <%= @job.salary_label %>
+    <% end %>
 
     <%= content_tag :div, class: "well skills" do %>
       <h4> Habilidades </h4>

@@ -10,10 +10,7 @@
       <%= f.input :website, as: :url %>
       <%= f.input :skills %>
       <%= f.input :description %>
-      <div class="row">
-      <%= f.input :min_salary, wrapper_html: { class: "col-xs-4" }%>
-      <%= f.input :max_salary, wrapper_html: { class: "col-xs-4" }%>
-      </div>
+      <%= f.input :salary, as: :radio_buttons, collection: salaries_hash %>
       <!--
       <%= f.label :description %>
       <div id="description-editor" class="markdown-editor">

@@ -58,7 +58,6 @@ class JobsController < ApplicationController
       :description,
       :modality,
       :website,
-      :min_salary,
-      :max_salary)
+      :salary)
   end
 end
