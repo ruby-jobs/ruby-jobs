@@ -1,6 +1,6 @@
-== RubyJobs
+== Ruby Jobs
 
-Repositório do RubyJobs.me
+Repositório do Ruby Jobs [www.rubyjobs.me](www.rubyjobs.me)
 
 O projeto foi criado com o intuito de mostrar ofertas de emprego
 para desenvolvedores Ruby.
