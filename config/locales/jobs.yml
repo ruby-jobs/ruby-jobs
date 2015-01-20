@@ -10,11 +10,13 @@ pt-BR:
   simple_form:
     labels:
       job:
-        title: "Título"
+        title: "Título da vaga"
         company: "Empresa"
+        website: "Site da empresa"
         modality: "Qual é a modalidade de trabalho?"
         location: "Localização"
         email: "E-mail para contato"
+        url: "Endereço da vaga (quando preenchido, os candidatos serão encaminhados para este endereço)"
         skills: "Habilidades/Requerimentos"
         description: "Descrição"
         min_salary: "Salário (de)"
@@ -25,6 +27,7 @@ pt-BR:
         company: "Empresa S/A"
         location: 'Rio de Janeiro - RJ'
         email: 'contato@empresa.com'
+        url: "http://www.seusite.com.br/sua_vaga"
         website: 'http://www.seusite.com.br'
         skills: 'Necessário ter experiência com: Ruby, Ruby on Rails ou outro framework MVC.  Desejável: APIs REST, Test Driven Development, MongoDB e GIT'
         description: 'Estamos contratando desenvolvedor Ruby/Rails, que já tenha experiência. Trabalhamos com metodologias ágeis, se tiver esta vivência também é legal =) Não precisa ser do Rio, contratamos pessoas remotas também. '

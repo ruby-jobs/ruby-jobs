@@ -2,12 +2,13 @@
   <div class="col-xs-12 col-md-10 col-md-offset-1">
     <%= simple_form_for @job, wrapper_mappings: { radio_buttons: :vertical_radio_and_checkboxes } do |f| %>
       <%= f.error_notification %>
-      <%= f.input :title %>
       <%= f.input :company %>
+      <%= f.input :website, as: :url %>
+      <%= f.input :title %>
       <%= f.input :modality, as: :radio_buttons, collection: modalities_hash %>
       <%= f.input :location %>
       <%= f.input :email %>
-      <%= f.input :website, as: :url %>
+      <%= f.input :url, as: :url %>
       <%= f.input :skills %>
       <%= f.input :description %>
       <%= f.input :salary, as: :radio_buttons, collection: salaries_hash %>
