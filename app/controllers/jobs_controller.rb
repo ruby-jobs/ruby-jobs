@@ -52,6 +52,7 @@ class JobsController < ApplicationController
     params.require(:job).permit(
       :title,
       :email,
+      :url,
       :company,
       :skills,
       :location,
