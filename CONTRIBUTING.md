@@ -17,9 +17,9 @@ Novas ideias e contribuintes são bem vindos!
   * Faça um Pull Request para o repositório master!
 
 * Padronizando
-  * Código sempre em inglês;
-  * Pull requests, issues, discussões e commits em português;
-  * Não esqueça de executar o passo-a-passo descrito no [readme] (https://github.com/matheusml/rubyjobs/blob/master/README.rdoc) para garantir que nossas configurações são sempre as mesmas.
+  * Código e commits sempre em inglês;
+  * Pull requests, issues e discussões em português;
+  * Não esqueça de executar o passo-a-passo descrito no [readme] (https://github.com/ruby-jobs/ruby-jobs/blob/master/README.md) para garantir que nossas configurações são sempre as mesmas.
   * Alguns links interessantes para serem seguidos
     * [ruby-style-guide] (https://github.com/bbatsov/ruby-style-guide)
     * [rails-style-guide] (https://github.com/bbatsov/rails-style-guide)
