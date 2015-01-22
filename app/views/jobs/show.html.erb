@@ -1,3 +1,12 @@
+<% content_for :opengraph do %>
+  <meta property="og:type" content="article">
+  <%= tag("meta", property: "og:title", content: @job.title ) %>
+  <%= tag("meta", property: "og:description", content: @job.description ) %>
+  <%= tag("meta", property: "og:url", content: job_url(@job) ) %>
+  <%= tag("meta", property: "og:image", content: asset_url('logo-for-opengraph.png') ) %>
+  <%= tag("meta", property: "og:site_name", content: "Ruby Jobs" ) %>
+<% end %>
+
 <header id="inner">
   <div class="container">
   </div>
@@ -56,4 +65,3 @@
 
   </div>
 </div>
-

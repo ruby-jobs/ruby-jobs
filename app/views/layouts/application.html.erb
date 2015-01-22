@@ -13,6 +13,8 @@
   <%= favicon_link_tag 'ruby.png' %>
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
+  <%= yield :opengraph %>
+
 </head>
 <body id="<%= controller_action %>">
   <%= render 'layouts/navbar' %>
