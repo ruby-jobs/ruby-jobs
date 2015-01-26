@@ -9,7 +9,7 @@ O projeto foi criado com o intuito de mostrar ofertas de emprego para desenvolve
 Clone o repositório
 
 ```
-git clone https://github.com/matheusml/rubyjobs.git
+git clone https://github.com/ruby-jobs/ruby-jobs.git
 ```
 
 Instale as dependências

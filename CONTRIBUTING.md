@@ -5,11 +5,11 @@ Novas ideias e contribuintes são bem vindos!
 ## Como contribuir?
 
 * Acompanhe o projeto
-  * Opine nos [Pull Requests] (https://github.com/matheusml/rubyjobs/pulls);
-  * Dê sugestões, abra bugs e melhorias em [Issues] (https://github.com/matheusml/rubyjobs/issues).
+  * Opine nos [Pull Requests] (https://github.com/ruby-jobs/ruby-jobs/pulls);
+  * Dê sugestões, abra bugs e melhorias em [Issues] (https://github.com/ruby-jobs/ruby-jobs/issues).
 
 * Codificando
-  * Faça o [fork] (https://github.com/matheusml/rubyjobs/fork) do projeto;
+  * Faça o [fork] (https://github.com/ruby-jobs/ruby-jobs/fork) do projeto;
   * Cria uma branch com o nome da funcionalidade: `git checkout -b minha-funcionalidade`;
   * Faça commits específicos para cada implementação: `git commit -m 'Adicionando testes para a classe XXX'`;
   * Por falar em testes, garanta a cobertura de sua implementação com testes;
