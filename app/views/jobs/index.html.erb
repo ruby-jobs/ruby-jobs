@@ -12,29 +12,8 @@
           <h1>Confira as vagas que estão esperando por você! </h1>
         </div>
 
-        <div class="row filters">
-          <!--<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">-->
-          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <div class="form-group">
-              <div class="input-group">
-                <input type="text" placeholder="Que tipo de trabalho você esta procurando?" ng-model="search" class="form-control">
-                <div class="input-group-addon"><i class="glyphicon glyphicon-search"></i></div>
-              </div>
-            </div>
-          </div>
-          <!--<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-            <div class="form-group">
-              <select ng-model="modality" ng-change="filter()" class="form-control">
-                <option value=""> Escolha a modalidade </option>
-                <option value="remote"> Remoto </option>
-                <option value="presencial"> Presencial </option>
-                <option value="freela"> Freela </option>
-                <option value="trainee"> Trainee </option>
-              </select>
-            </div>
-          </div>-->
-        </div>
-
+        <input type="text" placeholder="Que tipo de trabalho você esta procurando?" ng-model="search" class="form-control"><br/>
+        
         <table class="jobs-list">
           <tbody infinite-scroll="loadMore()" infinite-scroll-distance="3">
             <tr class="{{::job.modality}}" ng-repeat="job in jobs | filter:search">
