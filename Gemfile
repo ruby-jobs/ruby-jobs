@@ -19,6 +19,7 @@ gem 'kaminari'
 
 gem 'marked-rails'
 
+gem 'rails-env'
 gem 'redcarpet'
 
 gem 'sass-rails', '~> 4.0.0'
