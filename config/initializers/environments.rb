@@ -3,4 +3,6 @@ Rails.env.on(:production) do |config|
   config.serve_static_files = false
 
   config.log_level = :info
+
+  GA.tracker = 'UA-54767621-1'
 end
