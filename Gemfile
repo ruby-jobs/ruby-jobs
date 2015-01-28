@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '~> 4.1.6'
+gem 'rails', '~> 4.2'
 
 gem 'angularjs-rails'
 gem 'anjlab-bootstrap-rails', require: 'bootstrap-rails',
@@ -19,6 +19,7 @@ gem 'kaminari'
 
 gem 'marked-rails'
 
+gem 'rails-env'
 gem 'redcarpet'
 
 gem 'sass-rails', '~> 4.0.0'
