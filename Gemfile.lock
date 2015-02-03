@@ -259,7 +259,7 @@ DEPENDENCIES
   pry-rails
   rails (= 4.2)
   rails-env
-  rails_12factor (= 0.0.2)
+  rails_12factor
   redcarpet
   rspec-rails (~> 3.1.0)
   rubocop
