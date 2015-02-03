@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '~> 4.1.6'
+gem 'rails', '4.2'
 
 gem 'angularjs-rails'
 gem 'anjlab-bootstrap-rails', require: 'bootstrap-rails',
@@ -57,3 +57,5 @@ group :test do
   gem 'shoulda-matchers'
   gem 'simplecov', require: false
 end
+
+ruby '2.2.0'
