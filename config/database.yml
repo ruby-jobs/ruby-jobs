@@ -16,3 +16,4 @@ production:
   database: rubyjobs_production
   username: root
   password:
+  pool: <%= ENV["DB_POOL"] || ENV['MAX_THREADS'] || 5 %>
