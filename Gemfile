@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '4.2'
-
+gem 'pg', '~> 0.18.1'
 gem 'angularjs-rails'
 gem 'anjlab-bootstrap-rails', require: 'bootstrap-rails',
                               github: 'anjlab/bootstrap-rails',
@@ -33,7 +33,6 @@ gem 'uglifier', '>= 1.3.0'
 gem 'vuejs-rails'
 
 group :production do
-  gem 'pg'
   gem 'puma'
   gem 'rails_12factor'
 end
@@ -42,7 +41,6 @@ group :development do
   gem 'clean_logger'
   gem 'overcommit', require: false
   gem 'rubocop', require: false
-  gem 'sqlite3'
 end
 
 group :test, :development do
