@@ -1,5 +1,7 @@
 # Ruby Jobs
 
+[![Build Status](https://travis-ci.org/ruby-jobs/ruby-jobs.svg?branch=master)](https://travis-ci.org/ruby-jobs/ruby-jobs)
+
 Repositório do Ruby Jobs [www.rubyjobs.me](http://www.rubyjobs.me/).
 
 O projeto foi criado com o intuito de mostrar ofertas de emprego para desenvolvedores Ruby.
