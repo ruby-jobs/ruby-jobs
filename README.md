@@ -21,6 +21,8 @@ bundle install
 overcommit --install
 ```
 
+Copie o conteúdo do arquivo `database.yml.example` e crie um arquivo `database.yml`. Nele configure seus dados de acesso ao `postgresql`
+
 Crie o banco, rode as migrations e opcionalmente rode os seeds para ter uma base de dados inicial.
 
 ```
