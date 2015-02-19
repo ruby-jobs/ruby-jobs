@@ -19,7 +19,6 @@ pt-BR:
         url: "Endereço da vaga (quando preenchido, os candidatos serão encaminhados para este endereço)"
         skills: "Habilidades/Requerimentos"
         description: "Descrição"
-        salary: "Salário"
     placeholders:
       job:
         title: "Desenvolvedor Ruby on Rails"

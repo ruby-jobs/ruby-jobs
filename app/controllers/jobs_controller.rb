@@ -58,7 +58,6 @@ class JobsController < ApplicationController
       :location,
       :description,
       :modality,
-      :website,
-      :salary)
+      :website)
   end
 end
