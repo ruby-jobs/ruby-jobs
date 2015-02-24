@@ -25,6 +25,7 @@ class JobsController < ApplicationController
 
   def show
     @job = Job.find(params[:id])
+    raise Errors::JobExpirated if @job.created_at <= Date.today-3.months
   end
 
   def feed

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="rubyJobs">
+<head>
+  <title> Ops! Ruby Jobs | Trabalhos com Ruby</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= stylesheet_link_tag    'errors', media: 'all'%>
+  <%= csrf_meta_tags %>
+  <%= analytics_init if Rails.env.production? %>
+  <%= favicon_link_tag 'ruby.png' %>
+
+</head>
+<body id="<%= controller_action %>">
+  <div class="header">
+    <%= image_tag "logo-with-banner.png", class: "logo" %>
+  </div>
+  <div class="message">
+    <%= yield %>
+    <%= link_to "Voltar para tela inícial", :root, class: "btn btn-brand" %>
+  </div>
+  <%= render "layouts/footer" %>
+</body>
+</html>
