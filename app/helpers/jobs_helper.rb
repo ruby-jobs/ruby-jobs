@@ -13,7 +13,7 @@ module JobsHelper
   end
 
   def modalities_hash
-    {'Presencial' => :presencial, 'Remoto' => :remote, 'Freela' => :freela, 'Trainee' => :trainee}
+    { 'Presencial' => :presencial, 'Remoto' => :remote, 'Freela' => :freela, 'Trainee' => :trainee }
   end
 
   def salaries_hash
