@@ -13,11 +13,15 @@ module JobsHelper
   end
 
   def modalities_hash
-    {'Presencial' => :presencial, 'Remoto' => :remote, 'Freela' => :freela, 'Trainee' => :trainee}
+    { 'Presencial' => :presencial, 'Remoto' => :remote, 'Freela' => :freela, 'Trainee' => :trainee }
   end
 
   def salaries_hash
-    {'N/A' => :undefined, 'Abaixo de R$3.000' => :intern, 'R$3.000 - R$6.000' => :junior, 
+    { 'N/A' => :undefined, 'Abaixo de R$3.000' => :intern, 'R$3.000 - R$6.000' => :junior,
       'R$6.000 - R$9.000' => :medium, 'Acima de R$9.000' => :senior }
+  end
+
+  def contract_types_hash
+    { 'Não Especificado' => :not_specified, 'CLT' => :clt, 'PJ' => :pj }
   end
 end

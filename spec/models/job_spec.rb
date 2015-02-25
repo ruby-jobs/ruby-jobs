@@ -28,4 +28,28 @@ describe Job do
     subject(:job) { build(:job, email: 'm@e.com') }
     it { expect(job).not_to be_valid }
   end
+
+  describe '#contract_type_label' do
+    subject(:job) do
+      build(:job, contract_type: contract_type).contract_type_label
+    end
+
+    context 'Not Speficied' do
+      let(:contract_type) { 0 }
+
+      it { is_expected.to eq 'Não Especificado' }
+    end
+
+    context 'CLT' do
+      let(:contract_type) { 1 }
+
+      it { is_expected.to eq 'CLT' }
+    end
+
+    context 'PJ' do
+      let(:contract_type) { 2 }
+
+      it { is_expected.to eq 'PJ' }
+    end
+  end
 end

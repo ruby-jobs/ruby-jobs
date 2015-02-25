@@ -59,6 +59,7 @@ class JobsController < ApplicationController
       :description,
       :modality,
       :website,
+      :contract_type,
       :salary)
   end
 end

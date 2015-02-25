@@ -11,6 +11,7 @@ class Job < ActiveRecord::Base
   # enumerator
   enum modality: { presencial: 0, remote: 1, freela: 2, trainee: 3 }
   enum salary: { undefined: 0, intern: 1, junior: 2, medium: 3, senior: 4 }
+  enum contract_type: { not_specified: 0, clt: 1, pj: 2 }
 
   def badge
     "#{modality}-badge.png"
@@ -22,5 +23,9 @@ class Job < ActiveRecord::Base
 
   def salary_label
     ['N/A', 'Abaixo de R$3.000', 'R$3.000 - R$6.000', 'R$6.000 - R$9.000', 'Acima de R$9.000'][Job.salaries[salary]]
+  end
+
+  def contract_type_label
+    ['Não Especificado', 'CLT', 'PJ'][Job.contract_types[contract_type]]
   end
 end

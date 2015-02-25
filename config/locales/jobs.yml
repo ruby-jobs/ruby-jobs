@@ -20,6 +20,7 @@ pt-BR:
         skills: "Habilidades/Requerimentos"
         description: "Descrição"
         salary: "Salário"
+        contract_type: "Tipo de Contratação"
     placeholders:
       job:
         title: "Desenvolvedor Ruby on Rails"

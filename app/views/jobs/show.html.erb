@@ -33,7 +33,11 @@
     </div>
 
     <%= content_tag :div do %>
-      Salário <%= @job.salary_label %>
+      Tipo de Contratação: <%= @job.contract_type_label %>
+    <% end %>
+
+    <%= content_tag :div do %>
+      Salário: <%= @job.salary_label %>
     <% end %>
 
     <%= content_tag :div, class: "well skills" do %>
