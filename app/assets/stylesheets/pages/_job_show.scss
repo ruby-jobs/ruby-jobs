@@ -1,9 +1,27 @@
 #jobs-show {
 
+  .job-contract-type-not_specified,
+  .job-salary-undefined {
+    color: $base-color;
+  }
+
+  .job-salary-intern,
+  .job-salary-junior,
+  .job-salary-medium,
+  .job-salary-senior {
+    color: #44df57;
+  }
+
+  .job-contract-type-clt,
+  .job-contract-type-pj {
+    color: #4578ca;
+  }
+
   .page-header{
     span {
       margin-right: 15px;
     }
+
     span.job-date {
       color: #b6bac2;
     }
@@ -17,7 +35,7 @@
   }
 
   .job-description{
-    line-height: 150%;  
+    line-height: 150%;
   }
 
   .do-you-like-it {
@@ -53,5 +71,4 @@
       text-align: center;
     }
   }
-
 }

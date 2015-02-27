@@ -25,20 +25,15 @@
         <% end %>
         <%= content_tag :span, "#{@job.location}/#{@job.modality_name}", class: "job-location" %>
         <%= content_tag :span, l(@job.created_at, format: :long), class: "job-date" %>
+        <%= content_tag :span, %(Contratação: #{@job.contract_type_label}), format: :long,
+          class: "job-contract-type-#{@job.contract_type}" %>
+        <%= content_tag :span, %(Salário: #{@job.salary_label}), format: :long, class: "job-salary-#{@job.salary}" %>
       </p>
     </div>
 
     <div class="job-description">
       <%= markdown @job.description %>
     </div>
-
-    <%= content_tag :div do %>
-      Tipo de Contratação: <%= @job.contract_type_label %>
-    <% end %>
-
-    <%= content_tag :div do %>
-      Salário: <%= @job.salary_label %>
-    <% end %>
 
     <%= content_tag :div, class: "well skills" do %>
       <h4> Habilidades </h4>
