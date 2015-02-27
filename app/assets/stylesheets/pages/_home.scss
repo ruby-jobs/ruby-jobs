@@ -33,10 +33,15 @@ table.jobs-list{
     border-left-color: $trainee-color;
   }
 
-  td{
+  td {
     width: 25%;
 
+    &.job-title-company {
+      padding-top: 10px;
+      width: 50%;
+    }
   }
+
   td.job-badge{
     width: 10%;
     padding-left: 20px;
@@ -44,23 +49,39 @@ table.jobs-list{
       width: 2em;
     }
   }
+
   td.job-title {
     padding-left: 20px;
     color: $blue;
     text-transform: uppercase;
-    margin-right: 10px;
   }
+
   td.job-company{
     color: $title-color;
     margin-right: 10px;
   }
+
   td.job-location{
+    width: 25%;
 
   }
   td.job-date{
     color: #bfc3c7;
     text-align: right;
     padding-right: 20px;
+    width: 10%;
+  }
+
+  p {
+    &.job-title {
+      color: $blue;
+      text-transform: uppercase;
+    }
+
+    &.job-company {
+      color: $title-color;
+      margin-right: 10px;
+    }
   }
 }
 
