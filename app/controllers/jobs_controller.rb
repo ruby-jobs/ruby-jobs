@@ -1,7 +1,7 @@
 class JobsController < ApplicationController
   def index
-    @jobs = Job.page(params[:page]).per(4)
-    @jobs.where!('modality = ?', Job.modalities[params[:modality]]) unless params[:modality].blank?
+    @jobs = Job.actives.page(params[:page]).per(4)
+    @jobs.actives.where!('modality = ?', Job.modalities[params[:modality]]) unless params[:modality].blank?
 
     respond_to do |format|
       format.html
@@ -25,6 +25,7 @@ class JobsController < ApplicationController
 
   def show
     @job = Job.find(params[:id])
+    raise Errors::JobExpirated if @job.created_at <= Date.today-3.months
   end
 
   def feed

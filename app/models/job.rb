@@ -7,6 +7,7 @@ class Job < ActiveRecord::Base
 
   default_scope { order(id: :desc) }
   scope :updated_at_desc, -> { order(updated_at: :desc) }
+  scope :actives, -> { where( "created_at >= ?", Date.today-3.months) }
 
   # enumerator
   enum modality: { presencial: 0, remote: 1, freela: 2, trainee: 3 }

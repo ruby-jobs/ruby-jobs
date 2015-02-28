@@ -1,0 +1,5 @@
+pt-BR:
+  errors:
+    gone: "Ops! Parece que este job já expirou!"
+    job_not_found: "Ops! O Job solicitado não existe!"
+    route_not_found: "Essa URL não existe. Quer procurar um job? Clique no link abaixo."

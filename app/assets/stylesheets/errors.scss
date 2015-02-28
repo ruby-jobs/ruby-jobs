@@ -1,0 +1,44 @@
+@import "bootstrap-sass";
+@import "variables";
+@import "base/*";
+
+body {
+  background: #fff;
+  height: 100%;
+  position: relative;
+}
+
+.header {
+  position: relative;
+  top: 0;
+  padding: 75px 0;
+  width: 100%;
+  display: block;
+  background: #efeae1;
+  border-top: 5px solid darken(#efeae1, 5%);
+  border-bottom: 5px solid darken(#efeae1, 5%);
+  .logo {
+    width: 30em;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.message {
+  position: relative;
+  min-height: 300px;
+  text-align: center;
+  padding: 50px 0px;
+  
+  h1 {
+    margin-bottom: 40px;
+  }
+  
+  span {
+    display: inline-block;
+    font-size: 10em;
+    margin: 0;
+    transform: rotate(90deg);
+    color: $border-color;
+  }
+}

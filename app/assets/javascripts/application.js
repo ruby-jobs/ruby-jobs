@@ -1,6 +1,5 @@
-//= require jquery
-//= require jquery_ujs
-//= require twitter/bootstrap
+//= require jquery  
+//= require bootstrap-sass
 //= require marked
 //= require vue
 
