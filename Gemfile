@@ -1,56 +1,67 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
+# ruby '2.1.4'
 
+#================================================== 
+# RAILS CORE 
+#================================================== 
 gem 'rails', '4.2'
 gem 'pg', '~> 0.18.1'
-gem 'angularjs-rails'
-gem 'anjlab-bootstrap-rails', require: 'bootstrap-rails',
-                              github: 'anjlab/bootstrap-rails',
-                              branch: '3.0.0'
+gem 'bundler', '>= 1.7.0'
 
-gem 'bootstrap-kaminari-views'
-
+#================================================== 
+# ASSETS - Back-end 
+#================================================== 
+gem 'rails-i18n'
+gem 'jbuilder'
+gem 'simple_form'
+gem 'active_decorator'
+gem 'page_title'
 gem 'google-analytics-rails'
-
-gem 'jbuilder', '~> 1.2'
-gem 'jquery-rails'
-gem 'jquery-ui-rails'
-
 gem 'kaminari'
-
-gem 'marked-rails'
-
-gem 'rails-env'
-gem 'redcarpet'
-
-gem 'sass-rails', '~> 4.0.0'
-gem 'simple_form', '~> 3.1.0.rc1', github: 'plataformatec/simple_form'
-
-gem 'therubyracer', platforms: :ruby
 gem 'turbolinks'
 
-gem 'uglifier', '>= 1.3.0'
-
+#================================================== 
+# BUSINESS - Text formatters
+#================================================== 
+gem 'marked-rails'
+gem 'redcarpet'
 gem 'vuejs-rails'
 
-group :production do
-  gem 'puma'
-  gem 'rails_12factor'
+#================================================== 
+# ASSETS - Integration & Compressors 
+#================================================== 
+gem 'sass-rails'
+gem 'uglifier'
+
+#==================================================
+# ASSETS - Front-end
+#==================================================
+source 'https://rails-assets.org' do
+  gem 'rails-assets-jquery'
+  gem 'rails-assets-angular'
+  gem 'rails-assets-angular-resource'
+  gem 'rails-assets-bootstrap-sass'
 end
 
+gem 'nprogress-rails'
+
+#==================================================
+# GEM - Development
+#==================================================
 group :development do
-  gem 'clean_logger'
+  gem 'thin'
+  gem 'quiet_assets'
+  gem 'pry-meta'
   gem 'overcommit', require: false
   gem 'rubocop', require: false
+  gem 'sqlite3'
 end
 
-group :test, :development do
+group :development, :test do
+  gem 'spring'
   gem 'fabrication'
   gem 'faker'
-  gem 'pry-rails'
-  gem 'rspec-rails', '~> 3.1.0'
-end
-
-group :test do
+  gem 'rspec-rails', '~> 3.2.0'
   gem 'capybara'
   gem 'database_cleaner', '1.2.0'
   gem 'factory_girl', '~> 4.0'
@@ -58,4 +69,10 @@ group :test do
   gem 'simplecov', require: false
 end
 
-ruby '2.2.0'
+#==================================================
+# GEM - Production
+#==================================================
+group :production do
+  gem 'puma'
+  gem 'rails_12factor'
+end
