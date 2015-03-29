@@ -29,6 +29,36 @@ describe Job do
     it { expect(job).not_to be_valid }
   end
 
+  describe '#modality_name' do
+    subject(:job) do
+      build(:job, modality: modality).modality_name
+    end
+
+    context 'Class work' do
+      let(:modality) { 0 }
+
+      it { is_expected.to eq 'Presencial' }
+    end
+
+    context 'Remote' do
+      let(:modality) { 1 }
+
+      it { is_expected.to eq 'Remoto' }
+    end
+
+    context 'Freelancer' do
+      let(:modality) { 2 }
+
+      it { is_expected.to eq 'Freela' }
+    end
+
+    context 'Trainee' do
+      let(:modality) { 3 }
+
+      it { is_expected.to eq 'Trainee' }
+    end
+  end
+
   describe '#contract_type_label' do
     subject(:job) do
       build(:job, contract_type: contract_type).contract_type_label
