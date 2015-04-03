@@ -29,6 +29,22 @@ describe Job do
     it { expect(job).not_to be_valid }
   end
 
+  describe '#badge' do
+    subject(:job) do
+      build(:job, modality: modality).badge
+    end
+
+    modalies = Job.modalities.keys
+
+    modalies.each_with_index do |modality, index|
+      context "when modality is #{modality}" do
+        let(:modality) { index }
+
+        it { expect(job).to eq "#{modality}-badge.png" }
+      end
+    end
+  end
+
   describe '#modality_name' do
     subject(:job) do
       build(:job, modality: modality).modality_name
