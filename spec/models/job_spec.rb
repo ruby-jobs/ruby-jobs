@@ -59,6 +59,28 @@ describe Job do
     end
   end
 
+  describe '#salary_label' do
+    subject(:job) do
+      build(:job, salary: salary).salary_label
+    end
+
+    salaries = [
+      { name: 'Undefined', label: 'N/A' },
+      { name: 'Intern', label: 'Abaixo de R$3.000' },
+      { name: 'Junior', label: 'R$3.000 - R$6.000' },
+      { name: 'Medium', label: 'R$6.000 - R$9.000' },
+      { name: 'Senior', label: 'Acima de R$9.000' }
+    ]
+
+    salaries.each_with_index do |item, index|
+      context "#{item[:name]}" do
+        let(:salary) { index }
+
+        it { is_expected.to eq item[:label] }
+      end
+    end
+  end
+
   describe '#contract_type_label' do
     subject(:job) do
       build(:job, contract_type: contract_type).contract_type_label
