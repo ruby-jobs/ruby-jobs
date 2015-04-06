@@ -1,4 +1,4 @@
-atom_feed :language => 'pr-BR' do |feed|
+atom_feed :language => 'pt-BR' do |feed|
   feed.title @title
   feed.updated @updated
 
