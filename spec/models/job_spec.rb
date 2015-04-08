@@ -29,6 +29,74 @@ describe Job do
     it { expect(job).not_to be_valid }
   end
 
+  describe '#badge' do
+    subject(:job) do
+      build(:job, modality: modality).badge
+    end
+
+    modalies = Job.modalities.keys
+
+    modalies.each_with_index do |modality, index|
+      context "when modality is #{modality}" do
+        let(:modality) { index }
+
+        it { expect(job).to eq "#{modality}-badge.png" }
+      end
+    end
+  end
+
+  describe '#modality_name' do
+    subject(:job) do
+      build(:job, modality: modality).modality_name
+    end
+
+    context 'Class work' do
+      let(:modality) { 0 }
+
+      it { is_expected.to eq 'Presencial' }
+    end
+
+    context 'Remote' do
+      let(:modality) { 1 }
+
+      it { is_expected.to eq 'Remoto' }
+    end
+
+    context 'Freelancer' do
+      let(:modality) { 2 }
+
+      it { is_expected.to eq 'Freela' }
+    end
+
+    context 'Trainee' do
+      let(:modality) { 3 }
+
+      it { is_expected.to eq 'Trainee' }
+    end
+  end
+
+  describe '#salary_label' do
+    subject(:job) do
+      build(:job, salary: salary).salary_label
+    end
+
+    salaries = [
+      { name: 'Undefined', label: 'N/A' },
+      { name: 'Intern', label: 'Abaixo de R$3.000' },
+      { name: 'Junior', label: 'R$3.000 - R$6.000' },
+      { name: 'Medium', label: 'R$6.000 - R$9.000' },
+      { name: 'Senior', label: 'Acima de R$9.000' }
+    ]
+
+    salaries.each_with_index do |item, index|
+      context "#{item[:name]}" do
+        let(:salary) { index }
+
+        it { is_expected.to eq item[:label] }
+      end
+    end
+  end
+
   describe '#contract_type_label' do
     subject(:job) do
       build(:job, contract_type: contract_type).contract_type_label
