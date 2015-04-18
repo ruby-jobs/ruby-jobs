@@ -1,6 +1,6 @@
 class JobsController < ApplicationController
   def index
-    @jobs = Job.page(params[:page]).per(4)
+    @jobs = JobPresenter.wrap(Job.page(params[:page]).per(4))
     @jobs.where!('modality = ?', Job.modalities[params[:modality]]) unless params[:modality].blank?
 
     respond_to do |format|
@@ -24,7 +24,7 @@ class JobsController < ApplicationController
   end
 
   def show
-    @job = Job.find(params[:id])
+    @job = JobPresenter.new(Job.find(params[:id]))
   end
 
   def feed

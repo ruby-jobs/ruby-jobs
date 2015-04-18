@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
 
   def index
-    @jobs = Job.first(5)
+    @jobs = JobPresenter.wrap(Job.first(5))
   end
 
 end
