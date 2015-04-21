@@ -73,6 +73,8 @@ GEM
       ffi (~> 1.0, >= 1.0.11)
     clean_logger (0.0.5)
       rails
+    codeclimate-test-reporter (0.4.7)
+      simplecov (>= 0.7.1, < 1.0.0)
     coderay (1.1.0)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
@@ -247,6 +249,7 @@ DEPENDENCIES
   burgundy (~> 0.1.0)
   capybara
   clean_logger
+  codeclimate-test-reporter
   database_cleaner (= 1.2.0)
   fabrication
   factory_girl (~> 4.0)
