@@ -32,6 +32,8 @@ gem 'uglifier', '>= 1.3.0'
 
 gem 'vuejs-rails'
 
+gem 'burgundy', '~> 0.1.0'
+
 group :production do
   gem 'puma'
   gem 'rails_12factor'

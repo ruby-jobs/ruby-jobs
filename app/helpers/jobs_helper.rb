@@ -1,15 +1,14 @@
 module JobsHelper
   def link_to_twitter(title)
-    tag_a = []
-    url = CGI.escape(request.url)
-    tag_a << %(<a href="https://twitter.com/intent/tweet?)
-    tag_a << %(hashtags=RubyJobs&amp;)
-    tag_a << %(original_referer=#{url}&amp;)
-    tag_a << %(text=Vaga%20para%20#{CGI.escape(title)}&amp;)
-    tag_a << %(tw_p=tweetbutton&amp;url=#{url}")
-    tag_a << %(class="btn btn-info" target="_blank" >)
-    tag_a << %(<i class="fa fa-twitter fa-lg"> </i>  Tweet</a>)
-    tag_a.join.html_safe
+    escaped_url = CGI.escape(request.url)
+
+    url = 'https://twitter.com/intent/tweet?'
+    url += 'hashtags=RubyJobs&'
+    url += "original_referer=#{escaped_url}&"
+    url += "text=Vaga%20para%20#{CGI.escape(title)}&"
+    url += "w_p=tweetbutton&url=#{escaped_url}"
+
+    render partial: 'jobs/link_to_twitter', locals: { url: url, title: title }
   end
 
   def modalities_hash
