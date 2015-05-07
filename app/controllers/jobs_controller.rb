@@ -29,7 +29,7 @@ class JobsController < ApplicationController
 
   def feed
     # this will be the name of the feed displayed on the feed reader
-    @title = 'Rubyjobs'
+    @title = 'Ruby Jobs'
 
     # the news items
     @job =  Job.updated_at_desc
