@@ -10,7 +10,7 @@ atom_feed language: 'pt-BR' do |feed|
       entry.content item.description, type: 'html'
 
       entry.author do |author|
-        author.name item.email
+        author.name item.company
       end
     end
   end
