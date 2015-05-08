@@ -1,5 +1,4 @@
 module ApplicationHelper
-
   def navbar(*menus)
     menus.reduce('') { |a, e| a << menu_html(e) }
   end
