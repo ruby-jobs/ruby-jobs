@@ -54,7 +54,7 @@ end
 
 group :test do
   gem 'capybara'
-  gem "codeclimate-test-reporter", require: nil
+  gem 'codeclimate-test-reporter', require: nil
   gem 'database_cleaner', '1.2.0'
   gem 'factory_girl', '~> 4.0'
   gem 'shoulda-matchers'
