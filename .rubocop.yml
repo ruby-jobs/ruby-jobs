@@ -8,10 +8,10 @@ AllCops:
     - '**/*.rake'
   Exclude:
     - db/schema.rb
-    - db/migrate/*
-    - bin/*
+    - db/migrate/**/*
+    - bin/**/*
     - config/initializers/simple_form_bootstrap.rb*
-    - vendor/*
+    - vendor/**/*
 
 Metrics/LineLength:
   Max: 112
