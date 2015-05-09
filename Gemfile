@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.2'
+ruby '2.2.2'
+
+gem 'rails', '4.2.1'
 gem 'pg', '~> 0.18.1'
 gem 'angularjs-rails'
 gem 'anjlab-bootstrap-rails', require: 'bootstrap-rails',
@@ -54,11 +56,9 @@ end
 
 group :test do
   gem 'capybara'
-  gem "codeclimate-test-reporter", require: nil
+  gem 'codeclimate-test-reporter', require: nil
   gem 'database_cleaner', '1.2.0'
   gem 'factory_girl', '~> 4.0'
   gem 'shoulda-matchers'
   gem 'simplecov', require: false
 end
-
-ruby '2.2.1'
