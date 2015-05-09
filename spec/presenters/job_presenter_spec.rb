@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe JobPresenter do
-
   describe '#badge' do
     subject(:job) do
       JobPresenter.new(build(:job, modality: modality)).badge
