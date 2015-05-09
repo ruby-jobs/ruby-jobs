@@ -1,5 +1,3 @@
-inherit_from: .rubocop_todo.yml
-
 AllCops:
   RunRailsCops: true
   Include:
@@ -8,9 +6,10 @@ AllCops:
     - '**/*.rake'
   Exclude:
     - db/schema.rb
-    - db/migrate/*
-    - bin/*
+    - db/migrate/**/*
+    - bin/**/*
     - config/initializers/simple_form_bootstrap.rb*
+    - vendor/**/*
 
 Metrics/LineLength:
   Max: 112
