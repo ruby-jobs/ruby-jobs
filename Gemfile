@@ -36,6 +36,8 @@ gem 'vuejs-rails'
 
 gem 'burgundy', '~> 0.1.0'
 
+gem 'responders'
+
 group :production do
   gem 'puma'
   gem 'rails_12factor'
