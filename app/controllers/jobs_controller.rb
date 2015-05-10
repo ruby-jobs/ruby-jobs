@@ -7,7 +7,7 @@ class JobsController < ApplicationController
 
   def new
     @job = Job.new
-     respond_with @job
+    respond_with @job
   end
 
   def create
