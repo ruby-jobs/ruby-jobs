@@ -16,6 +16,11 @@
   <div class="container">
 
     <div class="page-header">
+      <%= content_tag :div, class: "alert alert-success fade in" do %>
+        <%= content_tag :button, 'X', class: "close", data: { dismiss: "alert"  } %>
+        <%= flash[:notice] %>
+      <% end if flash[:notice] %>
+
       <h1>
         <%= @job.title %>
       </h1>
