@@ -2,29 +2,23 @@ class JobsController < ApplicationController
   def index
     @jobs = JobPresenter.wrap(Job.page(params[:page]).per(4))
     @jobs.where!('modality = ?', Job.modalities[params[:modality]]) unless params[:modality].blank?
-
-    respond_to do |format|
-      format.html
-      format.json
-    end
+    respond_with @jobs
   end
 
   def new
     @job = Job.new
+    respond_with @job
   end
 
   def create
     @job = Job.new(job_params)
-
-    if @job.save
-      redirect_to @job
-    else
-      render 'new'
-    end
+    @job.save
+    respond_with @job
   end
 
   def show
     @job = JobPresenter.new(Job.find(params[:id]))
+    respond_with @job
   end
 
   def feed
