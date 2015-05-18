@@ -31,7 +31,8 @@ module JobsHelper
 
   def salaries_hash
     { 'N/A' => :undefined, 'Abaixo de R$3.000' => :intern, 'R$3.000 - R$6.000' => :junior,
-      'R$6.000 - R$9.000' => :medium, 'Acima de R$9.000' => :senior }
+      'R$6.000 - R$9.000' => :medium, 'Acima de R$9.000' => :senior,
+      'Valor hora a combinar' => :value_by_hour  }
   end
 
   def contract_types_hash
