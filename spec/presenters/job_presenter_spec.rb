@@ -57,7 +57,8 @@ RSpec.describe JobPresenter do
       { name: 'Intern', label: 'Abaixo de R$3.000' },
       { name: 'Junior', label: 'R$3.000 - R$6.000' },
       { name: 'Medium', label: 'R$6.000 - R$9.000' },
-      { name: 'Senior', label: 'Acima de R$9.000' }
+      { name: 'Senior', label: 'Acima de R$9.000' },
+      { name: 'Value by Hour', label: 'Valor hora a combinar' }
     ]
 
     salaries.each_with_index do |item, index|
