@@ -12,11 +12,31 @@
           <h1>Confira as vagas que estão esperando por você! </h1>
         </div>
 
-        <input type="text" placeholder="Que tipo de trabalho você esta procurando?" ng-model="search" class="form-control"><br/>
+        <div class="row filters">
+          <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+            <div class="form-group">
+              <div class="input-group">
+                <input type="text" placeholder="Que tipo de trabalho você esta procurando?" ng-model="filter.title" class="form-control"  ng-change="filterJob()" ng-debounce="500">
+                <div class="input-group-addon"><i class="glyphicon glyphicon-search"></i></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+            <div class="form-group">
+              <select ng-model="filter.modality" ng-change="filterJob()" class="form-control">
+                <option value=""> Escolha a modalidade </option>
+                <option value="0"> Presencial </option>
+                <option value="1"> Remoto </option>
+                <option value="2"> Freela </option>
+                <option value="3"> Trainee </option>
+              </select>
+            </div>
+          </div>
+        </div>
         
         <table class="jobs-list">
           <tbody infinite-scroll="loadMore()" infinite-scroll-distance="3">
-            <tr class="{{::job.modality}}" ng-repeat="job in jobs | filter:search">
+            <tr class="{{::job.modality}}" ng-repeat="job in jobs">
               <td class="job-badge"><img ng-src="{{::job.badge}}"></td>
               <td class="job-title"><a ng-href="{{::job.url}}">{{::job.title}}</a></td>
               <td class="job-company">

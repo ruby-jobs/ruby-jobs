@@ -11,12 +11,15 @@ app.controller('JobsCtrl', ['Job','$scope', function (Job, $scope){
     
     loadingMore = true;
 
-    var params = { page: page, modality: $scope.modality };
-    var jobs = Job.query(params, function () {
-      angular.forEach(jobs, function (job) { $scope.jobs.push(job); });
+    Job.query({ page: page, filter: $scope.filter }, function (jobs) {
+      
+      angular.forEach(jobs, function (job) {
+        $scope.jobs.push(job);
+      });
 
       hasMorePage = jobs.length > 0;
       loadingMore = false;
+
       $scope.loading = false;
     });
     
@@ -29,9 +32,18 @@ app.controller('JobsCtrl', ['Job','$scope', function (Job, $scope){
     $scope.load();
   };
 
-  $scope.filter = function() {
-    $scope.jobs = [];
+  $scope.filterJob = function() {
     page = 1;
-    $scope.load();
+    $scope.loading = true;
+
+    Job.query({ page: page, filter: $scope.filter }, function (data) {
+      $scope.jobs = data;
+
+      hasMorePage = $scope.jobs.length > 0;
+      loadingMore = false;
+      
+      $scope.loading = false;
+    });
   };
+  
 }]);
