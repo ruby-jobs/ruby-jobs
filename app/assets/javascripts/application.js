@@ -6,6 +6,7 @@
 
 //= require angular
 //= require angular-resource
+//= require angular/app
 //= require_tree ./angular
 
 //= require_tree .

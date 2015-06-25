@@ -1,7 +1,6 @@
 class JobsController < ApplicationController
   def index
-    @jobs = JobPresenter.wrap(Job.page(params[:page]).per(4))
-    @jobs.where!('modality = ?', Job.modalities[params[:modality]]) unless params[:modality].blank?
+    @jobs = JobPresenter.wrap(JobSearch.new(params).search)
     respond_with @jobs
   end
 
