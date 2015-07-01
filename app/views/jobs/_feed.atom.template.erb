@@ -1,0 +1,38 @@
+<div class="container">
+  <h1>
+    <%= content_tag :span, class: "job-company" do %>
+      <%= link_to_unless job.website.blank?, job.company, job.website %>
+    <% end %> - <%= job.title %>
+  </h1>
+
+ <div class="job-description">
+    <h4>Descrição</h4>
+    <%= markdown job.description %>
+  </div>
+
+  <%= content_tag :div, class: "well skills" do %>
+    <h4>Habilidades</h4>
+    <%= job.skills %>
+  <% end if job.skills.present? %>
+
+
+  <%= content_tag :div, class: "informations" do %>
+    <h4>Informações</h4>
+    <span>Data:</span> <%= l(job.created_at, format: :long) %><br/>
+    <span>Localização:</span> <%= job.location %><br/>
+    <span>Modalidade:</span> <%= job.modality %><br/>
+  <% end %>
+
+
+  <div class="col-xs-12 col-sm-12 col-md-11 col-lg-11">
+    <h4> Gostou da vaga? </h4>
+    <p>
+      <% if job.url.present? %>
+        <%= link_to 'Participe do processo de seleção', job.url %> e caso seja contratado deixe-nos saber!
+      <% else %>
+      Entre em contato com o responsável pelo email <%= content_tag :span, job.email, class: "email" %> e caso seja contratado deixe-nos saber!
+      <% end %>
+    </p>
+  </div>
+
+</div>

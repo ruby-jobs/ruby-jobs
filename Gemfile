@@ -54,6 +54,7 @@ group :test, :development do
   gem 'faker'
   gem 'pry-rails'
   gem 'rspec-rails', '~> 3.1.0'
+  gem 'sqlite3'
 end
 
 group :test do

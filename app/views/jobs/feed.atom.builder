@@ -17,6 +17,8 @@ atom_feed language: 'pt-BR' do |feed|
       entry.salary item.salary if item.salary.present?
       entry.url item.url if item.url.present?
 
+      entry.content render('feed.atom.template', job: item), type: 'html'
+
       entry.author do |author|
         author.name item.company
       end
