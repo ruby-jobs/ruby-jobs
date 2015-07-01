@@ -8,6 +8,7 @@ atom_feed language: 'pt-BR' do |feed|
     feed.entry(item) do |entry|
       entry.title item.title
       entry.content item.description, type: 'html'
+      entry.skills item.skills
 
       entry.author do |author|
         author.name item.company
