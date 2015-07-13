@@ -19,6 +19,13 @@ describe Job do
     end
   end
 
+  context 'delegates' do
+    it { expect(subject).to delegate_method(:badge).to(:decorate) }
+    it { expect(subject).to delegate_method(:modality_name).to(:decorate) }
+    it { expect(subject).to delegate_method(:salary_label).to(:decorate) }
+    it { expect(subject).to delegate_method(:contract_type_label).to(:decorate) }
+  end
+
   context 'when job is valid' do
     subject(:job) { build(:job) }
     it { expect(job).to be_valid }
@@ -27,5 +34,10 @@ describe Job do
   context 'when job is not valid' do
     subject(:job) { build(:job, email: 'm@e.com') }
     it { expect(job).not_to be_valid }
+  end
+
+  context '#decorate' do
+    subject(:job) { build(:job).decorate }
+    it { expect(job).to be_a(JobPresenter) }
   end
 end
