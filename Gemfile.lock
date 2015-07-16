@@ -283,3 +283,6 @@ DEPENDENCIES
   turbolinks
   uglifier (>= 1.3.0)
   vuejs-rails
+
+BUNDLED WITH
+   1.10.5
