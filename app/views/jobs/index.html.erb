@@ -13,7 +13,7 @@
         </div>
 
         <input type="text" placeholder="Que tipo de trabalho você esta procurando?" ng-model="search" class="form-control"><br/>
-        
+
         <table class="jobs-list">
           <tbody infinite-scroll="loadMore()" infinite-scroll-distance="3">
             <tr class="{{::job.modality}}" ng-repeat="job in jobs | filter:search">
@@ -29,7 +29,7 @@
               </td>
               <td class="job-location"> {{::job.location}} </td>
               <td class="job-date badger-right badger-{{::job.modality}}" data-badger="{{job.modality_name}}">
-                {{job.posted_at | date}}
+                {{job.posted_at | date:'dd/MM/yyyy'}}
               </td>
             </tr>
           </tbody>
