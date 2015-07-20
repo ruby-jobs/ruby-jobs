@@ -16,47 +16,12 @@
   <div class="container">
 
     <div class="page-header">
-      <h1>
-        <%= @job.title %>
-      </h1>
-      <p>
-        <%= content_tag :span, class: "job-company" do %>
-          <%= link_to_unless @job.website.blank?, @job.company, @job.website %>
-        <% end %>
-        <%= content_tag :span, "#{@job.location}/#{@job.modality_name}", class: "job-location" %>
-        <%= content_tag :span, l(@job.created_at, format: :long), class: "job-date" %>
-        <%= content_tag :span, %(Contratação: #{@job.contract_type_label}), format: :long,
-          class: "job-contract-type-#{@job.contract_type}" %>
-        <%= content_tag :span, %(Salário: #{@job.salary_label}), format: :long, class: "job-salary-#{@job.salary}" %>
-      </p>
-    </div>
+      <%= content_tag :div, class: "alert alert-success fade in" do %>
+        <%= content_tag :button, 'X', class: "close", data: { dismiss: "alert"  } %>
+        <%= flash[:notice] %>
+      <% end if flash[:notice] %>
 
-    <div class="job-description">
-      <%= markdown @job.description %>
-    </div>
-
-    <%= content_tag :div, class: "well skills" do %>
-      <h4> Habilidades </h4>
-      <%= @job.skills %>
-    <% end if @job.skills.present? %>
-
-    <div class="row do-you-like-it">
-
-      <div class="col-xs-12 col-sm-12 col-md-1 col-lg-1">
-        <%= image_tag  "logo.png" %>
-      </div>
-
-      <div class="col-xs-12 col-sm-12 col-md-11 col-lg-11">
-        <h4> Gostou da vaga? </h4>
-        <p>
-          <% if @job.url.present? %>
-            <%= link_to 'Participe do processo de seleção', @job.url %> e caso seja contratado deixe-nos saber!
-          <% else %>
-          Entre em contato com o responsável pelo email <%= content_tag :span, @job.email, class: "email" %> e caso seja contratado deixe-nos saber!
-          <% end %>
-        </p>
-      </div>
-
+      <%= render('job_description', job: @job, show_image: true) %>
     </div>
 
     <%= link_to 'Voltar', root_url, :class => 'btn btn-default' %>

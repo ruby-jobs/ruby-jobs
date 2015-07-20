@@ -13,7 +13,8 @@ class JobPresenter < Burgundy::Item
       Abaixo\ de\ R$3.000
       R$3.000\ -\ R$6.000
       R$6.000\ -\ R$9.000
-      Acima\ de\ R$9.000)[Job.salaries[salary]]
+      Acima\ de\ R$9.000
+      Valor\ hora\ a\ combinar)[Job.salaries[salary]]
   end
 
   def contract_type_label
