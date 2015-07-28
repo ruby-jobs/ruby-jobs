@@ -38,7 +38,7 @@
           <% if job.url.present? %>
             <%= link_to 'Participe do processo de seleção', job.url %> e caso seja contratado deixe-nos saber!
           <% else %>
-            Entre em contato com o responsável pelo email <%= content_tag :span, (mail_to job.email), class: "email" %>
+            Entre em contato com o responsável pelo e-mail <%= content_tag :span, (mail_to job.email), class: "email" %>
             e caso seja contratado deixe-nos saber!
           <% end %>
         </p>
