@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   match '/feed' => 'jobs#feed',
         :as => :feed,
         :defaults => { format: 'atom' }, via: :get
+
+  resources :sitemap, :only => :index
 end
