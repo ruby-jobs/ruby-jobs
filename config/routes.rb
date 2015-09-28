@@ -7,5 +7,5 @@ Rails.application.routes.draw do
         :as => :feed,
         :defaults => { format: 'atom' }, via: :get
 
-  resources :sitemap, :only => :index
+  resources :sitemap, only: :index
 end
