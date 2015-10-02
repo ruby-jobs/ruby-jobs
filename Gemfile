@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby '2.2.3'
 
 gem 'rails', '4.2.1'
-gem 'pg', '~> 0.18.1'
+gem 'pg'
 gem 'angularjs-rails'
 gem 'anjlab-bootstrap-rails', require: 'bootstrap-rails',
                               github: 'anjlab/bootstrap-rails',
