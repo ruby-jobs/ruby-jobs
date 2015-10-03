@@ -1,5 +1,3 @@
-inherit_from: .rubocop_todo.yml
-
 AllCops:
   RunRailsCops: true
   Include:
@@ -21,9 +19,6 @@ Style/AccessorMethodName:
 
 Style/Documentation:
   Enabled: false
-
-Style/EmptyLinesAroundBody:
-  Enabled: true
 
 Style/HashSyntax:
   Enabled: true
