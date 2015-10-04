@@ -37,6 +37,7 @@ gem 'vuejs-rails'
 gem 'burgundy', '~> 0.1.0'
 
 gem 'responders'
+gem 'bugsnag'
 
 group :production do
   gem 'puma'
