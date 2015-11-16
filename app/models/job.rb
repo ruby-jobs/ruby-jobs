@@ -2,7 +2,7 @@ class Job < ActiveRecord::Base
   include Sluggable
 
   validates :title, :description, :email, :company, presence: true
-  validates :email, format: { with: /\A[a-z]([\.\-]?\w+)+@[a-z]([\.\-]?\w+){2,}\Z/ }
+  validates :email, format: { with: /\A[a-z]([\.\-\+]?\w+)+@[a-z]([\.\-]?\w+){2,}\Z/ }
   validates :website, :url, format: { with: URI.regexp }, allow_blank: true
 
   default_scope { order(id: :desc) }
