@@ -11,6 +11,9 @@ describe Job do
 
     context 'format_of' do
       it { expect(subject).to allow_value('me@email.com').for(:email) }
+      it { expect(subject).to allow_value('m.e@email.com').for(:email) }
+      it { expect(subject).to allow_value('m-e@email.com').for(:email) }
+      it { expect(subject).to allow_value('m+e@email.com').for(:email) }
       it { expect(subject).not_to allow_value('m@e.com').for(:email) }
       it { expect(subject).to allow_value('http://www.site.com').for(:website) }
       it { expect(subject).not_to allow_value('site.com').for(:website) }
