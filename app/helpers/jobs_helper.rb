@@ -31,7 +31,7 @@ module JobsHelper
 
   def salaries_hash
     { 'Undefined' => :undefined, 'Less than $750 per month' => :intern, 'Between $ 750 and $ 1,500 per month' => :junior,
-      'Between $ 1,500 and $ 3,000 per month' => :medium, 'Bigger than $ 2,250 per month' => :senior,
+      'Between $ 1,500 and $ 2,250 per month' => :medium, 'Bigger than $ 2,250 per month' => :senior,
       'To match' => :value_by_hour  }
   end
 
