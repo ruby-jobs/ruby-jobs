@@ -27,3 +27,38 @@ en:
       truncate: "..."
       first: "&laquo; Primeira"
       last: "Última &raquo;"
+  activerecord:
+    errors:
+      models:
+        job:
+          attributes:
+            website:
+              invalid: "Formato inválido. Exemplo de formato permitido: http://www.nomedosite.com"
+
+  simple_form:
+    labels:
+      job:
+        title: "Job's title"
+        company: "Company"
+        website: "Company's Site "
+        modality: "What's the job's modality?"
+        location: "Location"
+        email: "Contact e-mail"
+        url: "Job address (When the candidate apply for this job, he/she will be forwarded to this address)"
+        skills: "Skills"
+        description: "Description"
+        salary: "Salary"
+        contract_type: "Contact type"
+    placeholders:
+      job:
+        title: "Ruby on Rails developer"
+        company: "Company S/A"
+        location: 'Toronto, ON'
+        email: 'contact@company.com'
+        url: "http://www.yoursite.com/your_career"
+        website: 'http://www.yoursite.com'
+        skills: 'You need have experiency with: Ruby, Ruby on Rails or other framework MVC. Is desirable: APIs REST, Test Driven Development, MongoDB e GIT'
+        description: 'We are hiring Ruby/Rails developers, which already have experience, We Work with agile methodologies, if you already have this will be cool. =) Is not necessary to be from Rio, we are hiring remote people  too.'
+    include_blanks:
+      user:
+        age: "Rather not say"
