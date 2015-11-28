@@ -48,7 +48,7 @@ en:
         skills: "Skills"
         description: "Description"
         salary: "Salary"
-        contract_type: "Contact type"
+        contract_type: "Contract type"
     placeholders:
       job:
         title: "Ruby on Rails developer"
