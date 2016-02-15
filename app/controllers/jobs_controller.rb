@@ -1,4 +1,6 @@
 class JobsController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :create]
+  
   def index
     @jobs = JobPresenter.wrap(Job.page(params[:page]).per(4))
     @jobs.where!('modality = ?', Job.modalities[params[:modality]]) unless params[:modality].blank?
@@ -6,12 +8,12 @@ class JobsController < ApplicationController
   end
 
   def new
-    @job = Job.new
+    @job = current_user.jobs.new
     respond_with @job
   end
 
   def create
-    @job = Job.new(job_params)
+    @job = current_user.jobs.new(job_params)
     @job.save
     respond_with @job
   end
@@ -45,6 +47,6 @@ class JobsController < ApplicationController
   def job_params
     params.require(:job).permit(
       :title, :email, :url, :company, :skills, :location, :description,
-      :modality, :website, :contract_type, :salary)
+      :modality, :website, :contract_type, :salary, :user)
   end
 end
