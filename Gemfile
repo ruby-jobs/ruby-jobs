@@ -40,6 +40,9 @@ gem 'responders'
 gem 'bugsnag'
 
 gem 'devise'
+gem 'omniauth'
+gem 'omniauth-facebook'
+
 
 group :production do
   gem 'puma'
