@@ -6,5 +6,6 @@ FactoryGirl.define do
     sequence(:email) { |n| "email#{n}@email.com" }
     description 'Description'
     slug 'slug'
+    association :user, factory: :user 
   end
 end

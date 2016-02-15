@@ -1,6 +1,8 @@
 require 'rails_helper'
 
 describe JobsController do
+  login
+  
   describe 'GET index' do
     it 'sets the @jobs variable' do
       job1 = Fabricate(:job)
