@@ -16,4 +16,3 @@ config/database.yml
 /tmp
 
 coverage/
-Gemfile.lock
