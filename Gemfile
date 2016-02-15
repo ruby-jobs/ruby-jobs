@@ -43,7 +43,6 @@ gem 'devise'
 gem 'omniauth'
 gem 'omniauth-facebook'
 
-
 group :production do
   gem 'puma'
   gem 'rails_12factor'

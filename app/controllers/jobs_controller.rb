@@ -1,6 +1,5 @@
 class JobsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create]
-  
   def index
     @jobs = JobPresenter.wrap(Job.page(params[:page]).per(4))
     @jobs.where!('modality = ?', Job.modalities[params[:modality]]) unless params[:modality].blank?
