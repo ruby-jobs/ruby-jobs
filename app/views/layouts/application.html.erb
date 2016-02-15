@@ -24,11 +24,6 @@
 </head>
 <body id="<%= controller_action %>">
   <%= render 'layouts/navbar' %>
-  <% if alert or notice %>  
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-  <% end %>
-
   <%= yield %>
   <%= render "layouts/footer" %>
 </body>
