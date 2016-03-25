@@ -1,0 +1,7 @@
+<p>Olá <%= @resource.email %>!</p>
+
+<p>Sua conta foi travada após varias tentativas de login.</p>
+
+<p>Clique no link abaixo para destravar sua conta:</p>
+
+<p><%= link_to 'Destravar minha conta', unlock_url(@resource, unlock_token: @token) %></p>

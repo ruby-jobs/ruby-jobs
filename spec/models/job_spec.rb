@@ -7,6 +7,7 @@ describe Job do
       it { expect(subject).to validate_presence_of(:description) }
       it { expect(subject).to validate_presence_of(:email) }
       it { expect(subject).to validate_presence_of(:company) }
+      it { expect(subject).to validate_presence_of(:user) }
     end
 
     context 'format_of' do
@@ -19,6 +20,7 @@ describe Job do
       it { expect(subject).not_to allow_value('site.com').for(:website) }
       it { expect(subject).to allow_value('http://www.site.com').for(:url) }
       it { expect(subject).not_to allow_value('site.com').for(:url) }
+      it { expect(subject).to allow_value(1).for(:user_id) }
     end
   end
 

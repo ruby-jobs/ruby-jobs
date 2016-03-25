@@ -4,4 +4,5 @@ Fabricator(:job) do
   email { Faker::Internet.email }
   company { Faker::Company.name }
   website { Faker::Internet.url }
+  user
 end
