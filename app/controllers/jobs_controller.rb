@@ -11,10 +11,9 @@ class JobsController < ApplicationController
   end
 
   def create
-    #TODO : REMOVE THE COMMENTS BELOW
-    #@job = Job.new(job_params)
-    #@job.save
-    #respond_with @job
+    # @job = Job.new(job_params)
+    # @job.save
+    # respond_with @job
   end
 
   def show
