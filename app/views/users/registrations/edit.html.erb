@@ -1,32 +1,36 @@
-<div class="row">
-  <div class="col-xs-12 col-md-10 col-md-offset-1">
-    <h2>Editar <%= resource_name.to_s.humanize %></h2>
+<div class="main-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-10 col-md-offset-1">
+        <h2>Editar <%= resource_name.to_s.humanize %></h2>
 
-    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-      <%= f.error_notification %>
+        <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+          <%= f.error_notification %>
 
-      <div class="form-inputs">
-        <%= f.input :email, required: true, autofocus: true %>
-        <%= f.input :name, required: true, label: 'Nome' %>
+          <div class="form-inputs">
+            <%= f.input :email, required: true, autofocus: true %>
+            <%= f.input :name, required: true, label: 'Nome' %>
 
-        <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-          <p>Continuamos esperando sua confirmação de email para: <%= resource.unconfirmed_email %></p>
+            <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+              <p>Continuamos esperando sua confirmação de email para: <%= resource.unconfirmed_email %></p>
+            <% end %>
+
+            <%= f.input :password, autocomplete: "off", label: 'Senha', hint: "deixe em branco se não deseja alterar", required: false %>
+            <%= f.input :password_confirmation, label: 'Confirmação de senha', required: false %>
+            <%= f.input :current_password, label: 'Senha atual', hint: "nós precisamos de sua senha atual para validarmos as mudanças", required: true %>
+          </div>
+
+          <div class="form-actions">
+            <%= f.button :submit, "Atualizar" %>
+          </div>
         <% end %>
 
-        <%= f.input :password, autocomplete: "off", label: 'Senha', hint: "deixe em branco se não deseja alterar", required: false %>
-        <%= f.input :password_confirmation, label: 'Confirmação de senha', required: false %>
-        <%= f.input :current_password, label: 'Senha atual', hint: "nós precisamos de sua senha atual para validarmos as mudanças", required: true %>
+        <h3>Cancelar minha conta</h3>
+
+        <p><%= link_to "Cancelar minha conta", registration_path(resource_name), data: { confirm: "Tem certeza?" }, method: :delete %></p>
+
+        <%= link_to "Voltar", :back %>
       </div>
-
-      <div class="form-actions">
-        <%= f.button :submit, "Atualizar" %>
-      </div>
-    <% end %>
-
-    <h3>Cancelar minha conta</h3>
-
-    <p><%= link_to "Cancelar minha conta", registration_path(resource_name), data: { confirm: "Tem certeza?" }, method: :delete %></p>
-
-    <%= link_to "Voltar", :back %>
+    </div>
   </div>
 </div>

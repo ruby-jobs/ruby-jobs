@@ -1,22 +1,26 @@
-<div class="row">
-  <div class="col-xs-12 col-md-10 col-md-offset-1">
-    <h2>Inscrever-se</h2>
+<div class="main-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-10 col-md-offset-1">
+        <h2>Inscrever-se</h2>
 
-    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-      <%= f.error_notification %>
+        <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= f.error_notification %>
 
-      <div class="form-inputs">
-        <%= f.input :email, required: true, autofocus: true %>
-        <%= f.input :name, required: true, label: 'Nome' %>
-        <%= f.input :password, required: true, label: 'Senha', hint: ("pelo menos #{@minimum_password_length} caracteres" if @minimum_password_length) %>
-        <%= f.input :password_confirmation, required: true, label: 'Repita a senha' %>
+          <div class="form-inputs">
+            <%= f.input :email, required: true, autofocus: true %>
+            <%= f.input :name, required: true, label: 'Nome' %>
+            <%= f.input :password, required: true, label: 'Senha', hint: ("pelo menos #{@minimum_password_length} caracteres" if @minimum_password_length) %>
+            <%= f.input :password_confirmation, required: true, label: 'Repita a senha' %>
+          </div>
+
+          <div class="form-actions">
+            <%= f.button :submit, "Inscrever-se", class: 'btn-block' %>
+          </div>
+        <% end %>
+
+        <%= render "users/shared/links" %>
       </div>
-
-      <div class="form-actions">
-        <%= f.button :submit, "Inscrever-se" %>
-      </div>
-    <% end %>
-
-    <%= render "users/shared/links" %>
+    </div>
   </div>
 </div>
