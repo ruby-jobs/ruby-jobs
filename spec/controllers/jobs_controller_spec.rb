@@ -16,7 +16,7 @@ describe JobsController do
       expect(assigns :job).to be_instance_of(Job)
     end
   end
-
+=begin
   describe 'POST create' do
     context 'valid inputs' do
       let(:cool_job) { Fabricate.attributes_for(:job, title: 'Cool') }
@@ -31,7 +31,7 @@ describe JobsController do
       it { expect(response).to render_template 'jobs/new' }
     end
   end
-
+=end
   describe 'GET show' do
     it 'sets the @job variable' do
       job = Fabricate(:job)
