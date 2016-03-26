@@ -1,0 +1,5 @@
+pt-BR:
+  recaptcha:
+    errors:
+      verification_failed: Validação reCAPTCHA falhou. Tente novamente.
+      recaptcha_unreachable: Validação reCAPTCHA falhou. Tente novamente.
