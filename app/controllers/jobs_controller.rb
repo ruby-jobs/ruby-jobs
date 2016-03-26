@@ -11,9 +11,15 @@ class JobsController < ApplicationController
   end
 
   def create
-    # @job = Job.new(job_params)
-    # @job.save
-    # respond_with @job
+    @job = Job.new(job_params)
+
+    # check if recaptcha was answered correctly. We pass the model and attribute in which the error will be attached case it fails.
+    if verify_recaptcha(model: @job, attribute: :recaptcha) && @job.save
+      respond_with @job
+    else
+      render :new
+    end
+
   end
 
   def show

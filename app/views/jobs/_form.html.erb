@@ -34,6 +34,11 @@
         </div>
       </div>
       -->
+      <div class="form-group <%= 'has-error' if @job.errors[:recaptcha] %>">
+
+        <%= recaptcha_tags%>
+        <span class="help-block"><%= @job.errors[:recaptcha].join(", ") %></span>
+      </div>
 
       <%= link_to 'Voltar', root_url, :class => 'btn btn-default' %>
       <%= f.button :submit, label: "Salvar", class: "btn btn-brand" %>
