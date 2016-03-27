@@ -39,6 +39,8 @@ gem 'burgundy', '~> 0.1.0'
 gem 'responders'
 gem 'bugsnag'
 
+gem 'recaptcha', require: 'recaptcha/rails'
+
 group :production do
   gem 'puma'
   gem 'rails_12factor'

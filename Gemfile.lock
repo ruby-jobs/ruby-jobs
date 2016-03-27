@@ -182,6 +182,8 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rainbow (2.0.0)
     rake (10.4.2)
+    recaptcha (1.1.1)
+      json
     redcarpet (3.2.3)
     ref (1.0.5)
     responders (2.1.0)
@@ -278,6 +280,7 @@ DEPENDENCIES
   rails (= 4.2.1)
   rails-env
   rails_12factor
+  recaptcha
   redcarpet
   responders
   rspec-rails (~> 3.1.0)
@@ -292,4 +295,4 @@ DEPENDENCIES
   vuejs-rails
 
 BUNDLED WITH
-   1.10.6
+   1.11.2
