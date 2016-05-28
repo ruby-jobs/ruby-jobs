@@ -8,4 +8,10 @@ Rails.application.routes.draw do
         :defaults => { format: 'atom' }, via: :get
 
   resources :sitemap, only: :index
+
+  namespace :api do
+    namespace :v1 do
+      resources :jobs, only: [:index, :show]
+    end
+  end
 end

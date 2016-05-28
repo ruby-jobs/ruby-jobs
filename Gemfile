@@ -41,6 +41,9 @@ gem 'bugsnag'
 
 gem 'recaptcha', require: 'recaptcha/rails'
 
+gem 'active_model_serializers'
+gem 'rack-cors'
+
 group :production do
   gem 'puma'
   gem 'rails_12factor'
