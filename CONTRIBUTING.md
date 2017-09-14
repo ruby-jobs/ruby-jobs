@@ -1,4 +1,4 @@
-# Contribuindo para o [rubyjobs.me] (http://www.rubyjobs.me/)
+# Contribuindo para o [rubyjobs.co] (http://www.rubyjobs.co/)
 
 Novas ideias e contribuintes são bem vindos!
 
