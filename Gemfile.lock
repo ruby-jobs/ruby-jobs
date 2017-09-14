@@ -135,6 +135,7 @@ GEM
     minitest (5.6.1)
     multi_json (1.11.0)
     multi_xml (0.5.5)
+    newrelic_rpm (3.16.0.318)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
     overcommit (0.25.0)
@@ -279,6 +280,7 @@ DEPENDENCIES
   jquery-ui-rails
   kaminari
   marked-rails
+  newrelic_rpm
   overcommit
   pg
   pry-rails
@@ -302,7 +304,7 @@ DEPENDENCIES
   vuejs-rails
 
 RUBY VERSION
-   ruby 2.2.3p173
+   ruby 2.3.1p112
 
 BUNDLED WITH
-   1.12.5
+   1.14.6

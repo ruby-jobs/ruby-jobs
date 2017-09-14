@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.2.3'
+ruby '2.3.1'
 
 gem 'rails', '4.2.1'
 gem 'pg'
@@ -27,7 +27,6 @@ gem 'redcarpet'
 gem 'sass-rails', '~> 4.0.0'
 gem 'simple_form', '~> 3.1.0.rc1', github: 'plataformatec/simple_form'
 
-gem 'therubyracer', platforms: :ruby
 gem 'turbolinks'
 
 gem 'uglifier', '>= 1.3.0'
@@ -43,10 +42,12 @@ gem 'recaptcha', require: 'recaptcha/rails'
 
 gem 'active_model_serializers'
 gem 'rack-cors'
+gem 'newrelic_rpm'
 
 group :production do
   gem 'puma'
   gem 'rails_12factor'
+  gem 'therubyracer', platforms: :ruby
 end
 
 group :development do
