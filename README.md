@@ -40,7 +40,7 @@ Para o deploy no Heroku, use os comandos:
 
     heroku config:set RECAPTCHA_PUBLIC_KEY="YOURPUBLICKEY"
     heroku config:set RECAPTCHA_PRIVATE_KEY="YOURPRIVATEKEY
-    
+    heroku config:set NEW_RELIC_KEY="YOURNEWRELICKEY"
 
 
 Rode os testes :+1:
