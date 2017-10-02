@@ -31,15 +31,15 @@ rake db:seed
 
 Configure as chaves do reCAPTCHA como varíaveis de ambiente. adicione as seguintes linhas no `.bash_profile` (Mac) ou `.bashrc` (Linux).
   
-    export RECAPTCHA_PUBLIC_KEY="YOURPUBLICKEY"
-    export RECAPTCHA_PRIVATE_KEY="YOURPRIVATEKEY"
+    export RECAPTCHA_SITE_KEY="YOURPUBLICKEY"
+    export RECAPTCHA_SECRET_KEY="YOURPRIVATEKEY"
 
 
 Para o deploy no Heroku, use os comandos:
 
 
-    heroku config:set RECAPTCHA_PUBLIC_KEY="YOURPUBLICKEY"
-    heroku config:set RECAPTCHA_PRIVATE_KEY="YOURPRIVATEKEY
+    heroku config:set RECAPTCHA_SITE_KEY="YOURPUBLICKEY"
+    heroku config:set RECAPTCHA_SECRET_KEY="YOURPRIVATEKEY
     heroku config:set NEW_RELIC_KEY="YOURNEWRELICKEY"
 
 
