@@ -180,7 +180,7 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rainbow (2.0.0)
-    rake (10.4.2)
+    rake (13.0.1)
     recaptcha (4.4.1)
       json
     redcarpet (3.2.3)
