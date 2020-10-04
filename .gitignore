@@ -16,3 +16,12 @@ config/database.yml
 /tmp
 
 coverage/
+
+.tool-versions
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
