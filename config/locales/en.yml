@@ -22,18 +22,18 @@ en:
   hello: "Hello world"
   views:
     pagination:
-      previous: "&lsaquo; Anterior"
-      next: "Próxima &rsaquo;"
+      previous: "&lsaquo; Previous"
+      next: "Next &rsaquo;"
       truncate: "..."
-      first: "&laquo; Primeira"
-      last: "Última &raquo;"
+      first: "&laquo; First"
+      last: "Last &raquo;"
   activerecord:
     errors:
       models:
         job:
           attributes:
             website:
-              invalid: "Formato inválido. Exemplo de formato permitido: http://www.nomedosite.com"
+              invalid: "Invalid format. Example of allowed format: http://www.nomedosite.com"
 
   simple_form:
     labels:
