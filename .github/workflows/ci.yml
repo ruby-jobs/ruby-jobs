@@ -1,0 +1,50 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:11-alpine
+        ports:
+          - 5432:5432
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+        options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Install ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.3.1
+
+      - name: Install dependencies
+        run: sudo apt-get install libpq-dev libssl1.0-dev
+
+      - name: Bundle Install
+        run: |
+          gem update --system
+          gem install bundler
+          bundle install --jobs 4 --retry 3
+
+      - name: Rubocop
+        run: |
+          bundle exec rubocop
+
+      - name: Prepare database
+        run: |
+          bundle exec rake db:create
+          bundle exec rake db:schema:load
+        env:
+          RAILS_ENV: test
+          DATABASE_URL: postgres://postgres:postgres@localhost:5432/rubyjobs_test
+
+      - name: Run RSpec
+        run: bundle exec rspec
+        env:
+          RAILS_ENV: test
+          DATABASE_URL: postgres://postgres:postgres@localhost:5432/rubyjobs_test
