@@ -1,4 +1,4 @@
-# Ruby Jobs [![Code Climate](https://codeclimate.com/github/ruby-jobs/ruby-jobs/badges/gpa.svg)](https://codeclimate.com/github/ruby-jobs/ruby-jobs) [![Build Status](https://travis-ci.org/ruby-jobs/ruby-jobs.svg?branch=master)](https://travis-ci.org/ruby-jobs/ruby-jobs) [![Test Coverage](https://codeclimate.com/github/ruby-jobs/ruby-jobs/badges/coverage.svg)](https://codeclimate.com/github/ruby-jobs/ruby-jobs)
+# Ruby Jobs [![Code Climate](https://codeclimate.com/github/ruby-jobs/ruby-jobs/badges/gpa.svg)](https://codeclimate.com/github/ruby-jobs/ruby-jobs) [![Build Status](https://github.com/ruby-jobs/ruby-jobs/workflows/CI/badge.svg)](https://travis-ci.org/ruby-jobs/ruby-jobs) [![Test Coverage](https://codeclimate.com/github/ruby-jobs/ruby-jobs/badges/coverage.svg)](https://codeclimate.com/github/ruby-jobs/ruby-jobs)
 
 Repositório do Ruby Jobs [www.rubyjobs.com.br](http://www.rubyjobs.com.br/).
 
