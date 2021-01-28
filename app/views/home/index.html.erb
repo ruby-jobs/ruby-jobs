@@ -1,6 +1,6 @@
 <header id="home">
   <div class="container">
-    <%= image_tag "logo-with-banner.png", class: "logo" %>
+    <%= image_tag "logo-with-banner.png", class: "logo img-responsive" %>
     <h2>Está precisando de um Rubista?</h2>
     <p> Anuncie sua vaga no RubyJobs e deixe mais de 4000 desenvolvedores saberem da sua vaga. </p>
     <%= link_to "Anuncie uma vaga!", new_job_path, class: "btn btn-ghost"%>
@@ -16,21 +16,23 @@
         <div class="page-header">
           <h1>Vagas recentes</h1>
         </div>
-        <table class="jobs-list">
-          <% @jobs.each do |job| %>
+        <div class="table-responsive">
+          <table class="jobs-list">
+            <% @jobs.each do |job| %>
             <tr class="<%= job.modality %>">
               <%= content_tag :td, image_tag(job.badge), class: "job-badge" %>
               <%= content_tag :td, class: "job-title-company" do %>
-                <%= content_tag :p, (link_to (truncate(job.title, :length => 50)), job_path(job)), class: "job-title" %>
-                <%= content_tag :p, (truncate(job.company, :length => 40)), class: "job-company" %>
+              <%= content_tag :p, (link_to (truncate(job.title, :length => 50)), job_path(job)), class: "job-title" %>
+              <%= content_tag :p, (truncate(job.company, :length => 40)), class: "job-company" %>
               <% end %>
               <%= content_tag :td, (truncate(job.location, :length => 28)), class: "job-location" %>
               <td class="job-date badger-right badger-<%= job.modality %>" data-badger="<%= job.modality_name %>">
                 <%= job.created_at.strftime("%d/%m/%Y") %>
               </td>
             </tr>
-          <% end %>
-        </table>
+            <% end %>
+          </table>
+        </div>
         <%= link_to "Ver + vagas", :jobs, class: "show-more-jobs" %>
       </div>
     </div>
