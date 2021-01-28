@@ -298,7 +298,7 @@ DEPENDENCIES
   vuejs-rails
 
 RUBY VERSION
-   ruby 2.3.1p112
+   ruby 2.5.8p224
 
 BUNDLED WITH
-   1.14.6
+   1.17.3
