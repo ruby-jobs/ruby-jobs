@@ -26,18 +26,16 @@ module JobsHelper
   end
 
   def modalities_hash
-    { 'Presential' => :presencial, 'Remote' => :remote, 'Freela' => :freela, 'Trainee' => :trainee }
+    { 'Presencial' => :presencial, 'Remoto' => :remote, 'Freela' => :freela, 'Trainee' => :trainee }
   end
 
   def salaries_hash
-    { 'Undefined' => :undefined, 'Less than $750 per month' => :intern,
-      'Between $ 750 and $ 1,500 per month' => :junior,
-      'Between $ 1,500 and $ 2,250 per month' => :medium,
-      'Bigger than $ 2,250 per month' => :senior,
-      'To match' => :value_by_hour  }
+    { 'N/A' => :undefined, 'Abaixo de R$3.000' => :intern, 'R$3.000 - R$6.000' => :junior,
+      'R$6.000 - R$9.000' => :medium, 'Acima de R$9.000' => :senior,
+      'Valor hora a combinar' => :value_by_hour  }
   end
 
   def contract_types_hash
-    { 'Not Specified' => :not_specified, 'CLT' => :clt, 'PJ' => :pj }
+    { 'Não Especificado' => :not_specified, 'CLT' => :clt, 'PJ' => :pj }
   end
 end
