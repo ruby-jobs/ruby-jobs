@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
 
-ruby '2.6.6'
+ruby '2.5.8'
 
+gem 'rake', '< 11.0'
 gem 'rails', '4.2.11'
 gem 'pg'
 gem 'angularjs-rails'
