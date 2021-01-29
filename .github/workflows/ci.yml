@@ -20,7 +20,7 @@ jobs:
       - name: Install ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.5.8
+          ruby-version: 2.6.6
 
       - name: Install dependencies
         run: sudo apt-get install libpq-dev libssl1.0-dev
