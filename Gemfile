@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.5.8'
 
-gem 'rake', '< 11.0'
+gem 'rake', '< 14.0'
 gem 'rails', '4.2.11'
 gem 'pg'
 gem 'angularjs-rails'
