@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.3.1'
 
-gem 'rails', '4.2.1'
+gem 'rails', '4.2.11'
 gem 'pg'
 gem 'angularjs-rails'
 gem 'anjlab-bootstrap-rails', require: 'bootstrap-rails',
@@ -45,7 +45,6 @@ gem 'newrelic_rpm'
 group :production do
   gem 'puma'
   gem 'rails_12factor'
-  gem 'therubyracer', platforms: :ruby
 end
 
 group :development do
