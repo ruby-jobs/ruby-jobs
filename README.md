@@ -54,3 +54,39 @@ Rode a aplicação :grin:
 ```
 rails server
 ```
+
+### Development with docker and docker-compose
+
+```shell script
+docker-compose build
+docker-compose up -d
+docker-compose run --rm app bundle exec rake db:create db:migrate
+docker-compose up # run http://localhost:3000
+docker-compose ps
+
+docker-compose stop
+docker-compose down
+docker-compose up --build
+docker-compose run --rm app rake db:create
+docker-compose run web rails db:setup db:migrate 
+docker-compose run web rails db:migrate 
+docker-compose run --rm app  rails console
+docker-compose run --rm app bash
+
+# Stop the container(s) using the following command:
+docker-compose down
+
+# Delete all containers using the following command:
+docker rm -f $(docker ps -a -q)
+
+# Delete all volumes using the following command:
+docker volume rm $(docker volume ls -q)
+
+# Restart the containers using the following command:
+docker-compose up -d
+docker-compose logs
+#remove all containers
+
+docker system prune -a
+docker images -a
+```

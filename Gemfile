@@ -43,6 +43,8 @@ gem 'active_model_serializers'
 gem 'rack-cors'
 gem 'newrelic_rpm'
 
+gem 'metamagic'
+
 group :production do
   gem 'puma'
   gem 'rails_12factor'
